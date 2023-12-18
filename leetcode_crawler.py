@@ -121,8 +121,8 @@ def get_submission_detail(CODE_DRIVER, info):
 
 if __name__ == "__main__":
     # keyin username, password, and webdriver_path
-    username, password = 'curlsjennifer@gmail.com', 'Cjenni37'
-    webdriver_path = "C:/Users/Goat/OneDrive/文件/python/chromedriver-win64/chromedriver.exe"
+    username, password = 'usermail@gmail.com', 'userpassword'
+    webdriver_path = "..//chromedriver-win64/chromedriver.exe"
     service = Service(executable_path = webdriver_path)
     chrome_options = Options()
     chrome_options.add_experimental_option("detach", True)
