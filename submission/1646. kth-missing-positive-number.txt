@@ -1,0 +1,10 @@
+class Solution(object):
+    def findKthPositive(self, arr, k):
+        arr = [0] + arr + [arr[-1] + k*2]
+        for i in range(len(arr)-1):
+            diff = arr[i+1] - arr[i] - 1
+            if diff < k:
+                k = k - diff
+            else:
+                return arr[i] + k
+        return 0

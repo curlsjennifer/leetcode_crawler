@@ -1,0 +1,8 @@
+class Solution(object):
+    def leastInterval(self, tasks, n):
+        dirs, key, ll = {}, set(tasks), len(tasks)
+        for it in key:dirs[it] = 0
+        for it in tasks:dirs[it] += 1
+        key = sorted(key, key=lambda x:dirs[x], reverse=True)
+        nn = len([it for it in key if dirs[it] == dirs[key[0]]])
+        return max((n+1)*(dirs[key[0]]-1)+nn, ll)

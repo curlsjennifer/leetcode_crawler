@@ -1,0 +1,30 @@
+class Solution(object):
+    def multiply(self, num1, num2):
+        if len(num1) > len(num2): num1, num2 = num2, num1
+        if len(num1) == 1:
+            if num1 == "0":return "0"
+            if num2 == "0":return "0"
+            num2 = [int(num2[i]) for i in range(len(num2))]
+            num1 = int(num1)
+            rr = 0
+            res = ""
+            for i in range(len(num2)-1, -1, -1):
+                mul = num2[i]*num1 + rr
+                res = str(mod(mul, 10)) + res
+                rr = int(mul/10)
+            if rr > 0 : res = str(rr) + res
+            return res
+        idx2 = list(set(num2))
+        dir = {}
+        for i in idx2:
+            dir[i] = int(self.multiply(i, num1))
+        add = [dir[it] for it in num2]
+        add.reverse()
+        res = ""
+        rr = 0
+        for item in add:
+            ad = item + rr
+            res = str(mod(ad, 10)) + res
+            rr = int(ad/10)
+        if rr > 0:res = str(rr) + res
+        return res

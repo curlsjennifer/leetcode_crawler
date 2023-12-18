@@ -1,0 +1,23 @@
+class Solution:
+    def sumOfFlooredPairs(self, nums):
+        maxi = max(nums) + 1
+        dic = {}
+        prefix=[0]*maxi
+        for i in nums:
+            if i in dic:
+                dic[i] += 1
+            else:
+                dic[i] = 1
+        #print(dic)
+        for i in range(1,maxi):
+            if i not in dic:
+                prefix[i] = prefix[i-1]
+            else:
+                prefix[i] = prefix[i-1]+dic[i]
+        #print(prefix,dic)
+        sumP = 0
+        for i in set(nums):
+            for j in range(i,maxi,i):
+                sumP += dic[i]*(prefix[-1]-prefix[j-1])
+                #print(sumP,end = " ")
+        return int(sumP % (10**9 +7))

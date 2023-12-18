@@ -1,0 +1,11 @@
+class Solution(object):
+    def reverseParentheses(self, s):
+        idx = []
+        s = [it for it in s]
+        for i in range(len(s)):
+            if s[i] == "(":idx.append(i)
+            if s[i] == ")":
+                i2 = idx.pop()
+                s[i2:i+1] = s[i2:i+1][::-1]
+        s = "".join(s).replace("(", "").replace(")", "")
+        return s

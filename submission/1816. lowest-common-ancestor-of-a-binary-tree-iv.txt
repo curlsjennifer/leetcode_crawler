@@ -1,0 +1,27 @@
+# Definition for a binary tree node.
+# class TreeNode(object):
+#     def __init__(self, x):
+#         self.val = x
+#         self.left = None
+#         self.right = None
+class Solution(object):
+    def lowestCommonAncestor(self, root, nodes):
+        self.nodes = nodes
+        self.root = root
+        return self.lca(root)[0]
+    def lca(self, root):
+        if root == None:return []
+        if root in self.nodes:
+            self.nodes.remove(root)
+            return [root]
+        left = self.lca(root.left)
+        right = self.lca(root.right)
+        if len(left) == 1 and len(right) == 0:return left
+        if len(left) == 0 and len(right) == 1:return right
+        if len(left) == 1 and len(right) == 1:return [root]
+        return []
+        """
+        :type root: TreeNode
+        :type nodes: List[TreeNode]
+        """
+        

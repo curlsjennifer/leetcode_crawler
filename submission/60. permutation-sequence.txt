@@ -1,0 +1,15 @@
+class Solution(object):
+    def getPermutation(self, n, k):
+        nn = [1]
+        res = ""
+        num = [str(i+1) for i in range(n)]
+        k = k-1
+        for i in range(2, n):nn.append(nn[-1]*i)
+        for i in range(n-2, -1, -1):
+            idx = int(k/nn[i])
+            print(idx, res, k,num)
+            res = res + num[idx]
+            num.pop(idx)
+            k = mod(k, nn[i])
+        return res + num[0]
+        

@@ -1,0 +1,7 @@
+class Solution(object):
+    def isValid(self, s):
+        ll = -1
+        while len(s) != ll:
+            ll = len(s)
+            s = s.replace("abc", "")
+        return True if ll == 0 else False

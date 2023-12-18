@@ -1,0 +1,5 @@
+class Solution(object):
+    def isPalindrome(self, s):
+        s = [it.lower() for it in s if 96 < ord(it) < 123 or 64< ord(it)<91 or 47 < 
+            ord(it) < 58]
+        return True if s[::-1] == s else False

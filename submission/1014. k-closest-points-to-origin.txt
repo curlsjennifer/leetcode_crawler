@@ -1,0 +1,12 @@
+import bisect
+class Solution(object):
+    def kClosest(self, points, k):
+        if len(points) == k:return points
+        dist = [it[0]*it[0] + it[1]*it[1] for i,it in enumerate(points)]
+        origin = sorted(dist[:k])
+        for i in range(k, len(dist)):
+            if dist[i] < origin[-1]:
+                bisect.insort(origin, dist[i])
+                origin.pop()
+                        return [it for i, it in enumerate(points) if dist[i] <= origin[-1]]
+        

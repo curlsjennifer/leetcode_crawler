@@ -1,0 +1,30 @@
+class Solution(object):
+    def ladderLength(self, beginWord, endWord, wordList):
+        if endWord not in wordList:return 0
+        layer_all = [[beginWord]]
+        lw = len(wordList) + 1
+        while (len(wordList) > 0) & (len(wordList) < lw):
+            lw = len(wordList)
+            sons = []
+            for father in layer_all[-1]:
+                son = [item for item in wordList if iffather(father, item)]
+                wordList = [item for item in wordList if item not in son]
+                sons = sons + son
+                if endWord in son:return len(layer_all) + 1
+            layer_all.append(sons)
+        return 0
+            def iffather(a, b):
+    return True if sum([1 for i in range(len(a)) if a[i]==b[i]]) == len(a)-1 else 
+        False
+class word:
+    def __init__(self, ww):
+        self.ww = ww
+        self.l = len(ww)
+        self.num = 0
+    def iffather(self, neww):
+        if sum([1 for i in range(self.l) if w[i]==neww[i]]) == self.l:
+            self.father = neww.ww
+            self.num = neww.num + 1
+            return True
+        else:
+            return False

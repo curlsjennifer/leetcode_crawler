@@ -1,0 +1,10 @@
+class Solution(object):
+    def isMonotonic(self, nums):
+        if len(nums) < 3:return True
+        if max(nums) - min(nums) == 0:return True
+        dirs = nums[-1] - nums[0]
+        if dirs == 0:return False
+        dirs = 1 if dirs > 0 else -1
+        for i in range(len(nums)-1):
+            if (nums[i+1] - nums[i])*dirs < 0:return False
+        return True

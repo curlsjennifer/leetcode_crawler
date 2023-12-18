@@ -1,0 +1,5 @@
+class Solution(object):
+    def diagonalSum(self, mat):
+        lm = len(mat)
+        return sum([mat[i][i]+mat[i][lm-i-1] for i in range(lm)]) - (mat[(lm-1)/2][(lm
+            -1)/2] if mod(lm,2) == 1 else 0)

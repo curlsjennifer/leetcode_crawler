@@ -1,0 +1,14 @@
+class Solution(object):
+    def getMoneyAmount(self, n):
+        self.dirs = {}
+        return self.ga(1, n)
+    def ga(self, start, end):
+        if start == end:return 0
+        if start == end -1:return start
+        lbl = str(start) + "_" + str(end)
+        if lbl in self.dirs:return self.dirs[lbl]
+        res = min(self.ga(start+1, end)+start, self.ga(start, end-1)+end)
+        for i in range(start+1, end):res = min(res, i+ max(self.ga(start, i-1), self
+            .ga(i+1, end)))
+        self.dirs[lbl] = res
+        return res

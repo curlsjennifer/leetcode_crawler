@@ -1,0 +1,27 @@
+# Definition for a binary tree node.
+# class TreeNode(object):
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution(object):
+    def allPossibleFBT(self, n):
+        if mod(n, 2) == 0:return []
+        self.dirs = {}
+        self.dirs[1] = [TreeNode()]
+        self.dirs[2] = []
+        self.dirs[3] = [TreeNode(left=TreeNode(), right=TreeNode())]
+        return self.apt(n)
+        def apt(self, n):
+        try:
+            return self.dirs[n]
+        except:
+            pass
+        res = []
+        for i in range(1, n-1, 2):
+            i2 = n-1-i
+            left, right = self.apt(i), self.apt(i2)
+            res.extend([TreeNode(left=ll, right=rr) for ll in left for rr in right])
+        self.dirs[n] = res
+        return res
+                    

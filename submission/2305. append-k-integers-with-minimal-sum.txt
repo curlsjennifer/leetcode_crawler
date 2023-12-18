@@ -1,0 +1,15 @@
+class Solution(object):
+    def minimalKSum(self, nums, k):
+        res = 0
+        nums = [0] + sorted(set(nums)) + [max(nums) + k*2]
+        print(nums)
+        for i in range(len(nums)-1):
+            diff = nums[i+1] - nums[i] - 1
+            if diff < k:
+                k = k - diff
+                res += self.area(nums[i]+1, nums[i+1]-1)
+            else:
+                return res + self.area(nums[i]+1, nums[i]+k)
+        return res
+    def area(self, n1, n2):
+        return (n1+n2)*(n2-n1+1)/2

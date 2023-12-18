@@ -1,0 +1,21 @@
+class Solution(object):
+    def minAreaRect(self, points):
+        xx, yy = {}, {}
+        for i, it in enumerate(points):xx[it[0]] = []
+        for i, it in enumerate(points):xx[it[0]].append(i)
+        for i, it in enumerate(points):yy[it[1]] = []
+        for i, it in enumerate(points):yy[it[1]].append(i)
+        possx = sorted([k for k in xx if len(xx[k]) >= 2])
+        possy = sorted([k for k in yy if len(yy[k]) >= 2])
+        if len(possx) < 2 or len(possy) < 2:return 0
+        pairs = []
+        marea = float("inf")
+        for i in range(len(possx)-1):
+            for j in range(i+1, len(possx)):
+                upts = [points[it][1] for it in xx[possx[i]]]
+                upts = sorted([points[it][1] for it in xx[possx[j]] if points[it][1] 
+                    in upts])
+                if len(upts) >= 2:
+                    minl = min([upts[k+1]-upts[k] for k in range(len(upts)-1)])
+                    marea = min(marea, (possx[j]-possx[i])*minl)
+        return 0 if marea == float("inf") else marea

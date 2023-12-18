@@ -1,0 +1,13 @@
+class Logger(object):
+    def __init__(self):
+        self.dirs = {}
+        self.layer = []
+            def shouldPrintMessage(self, timestamp, message):
+        if message not in self.layer:
+            self.layer.append(message)
+            self.dirs[message] = 10 + timestamp
+            return True
+        else:
+            if self.dirs[message] > timestamp:return False
+            self.dirs[message] = 10 + timestamp
+            return True

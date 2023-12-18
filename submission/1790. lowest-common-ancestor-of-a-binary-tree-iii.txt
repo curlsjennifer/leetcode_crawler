@@ -1,0 +1,33 @@
+"""
+# Definition for a Node.
+class Node:
+    def __init__(self, val):
+        self.val = val
+        self.left = None
+        self.right = None
+        self.parent = None
+"""
+class Solution(object):
+    def lowestCommonAncestor(self, p, q):
+        lp, lq = self.gd(p), self.gd(q)
+        if lp > lq:
+            for i in range(lp-lq):
+                p = p.parent
+        elif lp < lq:
+            for i in range(lq-lp):
+                q = q.parent
+                while p != None:
+            if p == q:
+                return p
+            else:
+                p = p.parent
+                q = q.parent
+        return p
+    def gd(self, root):
+        if root == None:return 0
+        return self.gd(root.parent)+1
+        """
+        :type node: Node
+        :rtype: Node
+        """
+        

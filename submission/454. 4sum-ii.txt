@@ -1,0 +1,18 @@
+class Solution(object):
+    def fourSumCount(self, nums1, nums2, nums3, nums4):
+        n1 = sorted(nums1)
+        n2 = sorted(nums2)
+        n3 = sorted(nums3)
+        n4 = sorted(nums4)
+        res1 = [n1[i]+n2[j] for i in range(len(n1)) for j in range(len(n2))]
+        res2 = [n3[i]+n4[j] for i in range(len(n3)) for j in range(len(n4))]
+        dir1, dir2 = {}, {}
+        for it in set(res1):dir1[it] = 0
+        for it in set(res2):dir2[it] = 0
+        for it in res1:dir1[it] += 1
+        for it in res2:dir2[it] += 1
+        res = 0
+        for it in dir1:
+            if -it in dir2:
+                res += dir1[it]*dir2[-it]
+        return res

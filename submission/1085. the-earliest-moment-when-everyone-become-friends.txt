@@ -1,0 +1,14 @@
+class Solution(object):
+    def earliestAcq(self, logs, n):
+        dirs = {}
+        logs = sorted(logs, key=lambda x:x[0])
+        for i in range(n):dirs[i] = [-1, i]
+        rec = [i for i in range(n)]
+        for i, log in enumerate(logs):
+            info1 = dirs[rec[log[1]]]
+            info2 = dirs[rec[log[2]]]
+            if rec[log[1]] == rec[log[2]]:continue
+            for i in dirs[rec[log[2]]][1:]:rec[i] = rec[log[1]]
+            dirs[rec[log[1]]] = [log[0]] + list(set(info1[1:] + info2[1:]))
+            if len(dirs[rec[log[1]]]) == n+1:return log[0]
+        return -1

@@ -1,0 +1,29 @@
+class Solution(object):
+    def findKthLargest(self, nums, k):
+        if k == 1:return max(nums)
+        if k == len(nums):return min(nums)
+        self.rec = [nums[0]]
+        for i in range(1,len(nums)):
+            self.bist(nums[i])
+            if len(self.rec) > k:self.rec.pop(0)
+                    return self.rec[0]
+    def bist(self, inst):
+        if len(self.rec) == 1:
+            self.rec = self.rec + [inst] if inst > self.rec[0] else [inst] + self.rec
+            return 
+                start, end, cen = 0, len(self.rec)-1, int(len(self.rec)/2)
+        if inst <= self.rec[0]:
+            self.rec.insert(0, inst)
+                    elif inst >= self.rec[-1]:
+            self.rec.append(inst)
+        else:
+            while end > start + 1:
+                if self.rec[cen] < inst:
+                    start = cen
+                else:
+                    end = cen
+                cen = int((start + end)/2)
+            if self.rec[start] <= inst <= self.rec[start+1]:
+                self.rec.insert(start+1, inst)
+            else:
+                self.rec.insert(start+2, inst)

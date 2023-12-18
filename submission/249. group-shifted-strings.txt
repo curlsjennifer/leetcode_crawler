@@ -1,0 +1,10 @@
+class Solution(object):
+    def groupStrings(self, strings):
+        txt = [[ord(it) for it in item] for item in strings]
+        txt = [[it-item[0] for it in item] for item in txt]
+        txt = [[it if it>=0 else it+26 for it in item] for item in txt]
+        txt = ["".join([chr(97+it) for it in item]) for item in txt]
+        dirs = {}
+        for it in txt:dirs[it] = []
+        for i in range(len(strings)):dirs[txt[i]].append(strings[i])
+        return [dirs[it] for it in dirs]

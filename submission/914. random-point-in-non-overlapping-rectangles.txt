@@ -1,0 +1,20 @@
+import random
+from numpy.random import choice
+class Solution(object):
+    def __init__(self, rects):
+        self.rects = rects     
+        self.area = [(it[0] - it[2]-1) * (it[1]- it[3]-1) for it in self.rects]
+        sarea = sum(self.area)
+        self.area = [it*1.0/sarea for it in self.area]
+    def pick(self):
+        rect = choice(range(len(self.rects)), 1, p=self.area)
+        rect = self.rects[rect]
+        x = random.randint(rect[0], rect[2])
+        y = random.randint(rect[1], rect[3])
+        return [x,y]
+        """
+        :rtype: List[int]
+        """
+        # Your Solution object will be instantiated and called as such:
+# obj = Solution(rects)
+# param_1 = obj.pick()

@@ -1,0 +1,9 @@
+class Solution(object):
+    def letterCombinations(self, digits):
+        dirc = ['abc', 'def', 'ghi', 'jkl', 'mno', 'pqrs', 'tuv', 'wxyz']
+        if digits == "":return []
+        res = [i for i in dirc[int(digits[0])-2]]
+        if len(digits) == 1:return res
+        for i in range(1, len(digits)):res = [it + it2 for it2 in [i for i in 
+            dirc[int(digits[i])-2]] for it in res]
+        return res

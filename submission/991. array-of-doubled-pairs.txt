@@ -1,0 +1,15 @@
+class Solution(object):
+    def canReorderDoubled(self, arr):
+        dirs, key = {}, set(arr)
+        for it in key:dirs[it] = 0
+        for it in arr:dirs[it] += 1
+        key = sorted(key, key=lambda x:pow(x,2))
+        if 0 in key and mod(dirs[0],2) == 1:return False
+        if 0 in key:key.remove(0)
+        while len(key) > 0:
+            p = key.pop(0)
+            if dirs[p] == 0:continue
+            if p*2 not in key:return False
+            if dirs[p] > dirs[2*p]:return False
+            dirs[2*p] = dirs[2*p] - dirs[p] 
+        return True

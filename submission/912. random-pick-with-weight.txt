@@ -1,0 +1,15 @@
+import random
+class Solution(object):
+    def __init__(self, w):
+        self.total = sum(w)
+        self.w = w
+    def pickIndex(self):
+        rm = random.randint(0, self.total-1)
+        i = 0
+        while rm - self.w[i] >= 0:
+            rm -= self.w[i]
+            i += 1
+                    return i
+        # Your Solution object will be instantiated and called as such:
+# obj = Solution(w)
+# param_1 = obj.pickIndex()

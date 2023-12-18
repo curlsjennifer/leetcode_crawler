@@ -1,0 +1,31 @@
+"""
+# Definition for a Node.
+class Node(object):
+    def __init__(self, val = 0, neighbors = None):
+        self.val = val
+        self.neighbors = neighbors if neighbors is not None else []
+"""
+class Solution(object):
+    def cloneGraph(self, node):
+        root = node
+        if node == None :return node
+        old_nodes = self.get_all_nodes(node)
+        mapping = {}
+        for old_node in old_nodes:
+            mapping[old_node] = Node(old_node.val)
+                for old_node in old_nodes:
+            new_node = mapping[old_node]
+            for neighbor in old_node.neighbors:
+                new_neighbor = mapping[neighbor]
+                new_node.neighbors.append(new_neighbor)
+        return mapping[root]
+    def get_all_nodes(self, node):
+        queue = [node]
+        result = set([node])
+        while queue:
+            head = queue.pop(0)
+            for neighbor in head.neighbors:
+                if neighbor not in result:
+                    result.add(neighbor)
+                    queue.append(neighbor)
+        return result

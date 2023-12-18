@@ -1,0 +1,16 @@
+class Solution(object):
+    def lcaDeepestLeaves(self, root):
+        self.dep = self.dep(root)
+        return self.gdl(root, 1)[0]
+    def dep(self, root):
+        if root == None:return 0
+        return max(self.dep(root.left), self.dep(root.right)) + 1
+    def gdl(self, root, dep):
+        if root == None:return []
+        if dep == self.dep:return [root]
+        left = self.gdl(root.left, dep+1)
+        right = self.gdl(root.right, dep+1)
+        if len(left) == 0 and len(right) == 0:return []
+        if len(left) > 0 and len(right) == 0:return left
+        if len(left) == 0 and len(right) > 0:return right
+        return [root]

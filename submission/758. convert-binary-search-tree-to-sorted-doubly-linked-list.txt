@@ -1,0 +1,30 @@
+# Definition for a Node.
+class Node(object):
+    def __init__(self, val, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+class Solution(object):
+    def treeToDoublyList(self, root):
+        if not root:return root
+        head, tail, st, cur = None, None, [], root
+        while cur:
+            st.append(cur)
+            cur = cur.left
+        while st:
+            cur = st.pop()
+            if not head:
+                head, tail = cur, cur
+            else:
+                tail.right = cur
+                cur.left = tail
+                tail = tail.right
+                        if cur.right:
+                tmp = cur.right
+                while tmp:
+                    st.append(tmp)
+                    tmp = tmp.left
+        tail.right = head
+        head.left = tail
+        return head
+ 

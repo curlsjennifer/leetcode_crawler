@@ -1,0 +1,28 @@
+class Solution(object):
+    def calculateMinimumHP(self, dungeon):
+        #dungeon = [[i+100*j+101 for i in range(10)] for j in range(4)]
+        m = len(dungeon) #4
+        n = len(dungeon[0]) #10
+        mdim = min(m, n)
+        res = [[0 for i in range(n)] for j in range(m)]
+        res[-1][-1] = minstep(1, dungeon[-1][-1])
+        if m + n == 2: return res[-1][-1]
+        for I in range(m + n - 2):
+            lens = min(min(I+2, mdim), m + n - 2 - I)
+            for i in range(lens):
+                x = max(n-2-I,0) + i
+                y = m-1-i-max(0, I-n+2)
+                tmp = []
+                if x < n-1 :tmp.append([x+1,y,res[y][x+1], minstep(res[y][x+1], 
+                    dungeon[y][x])])
+                if y < m-1 :tmp.append([x,y+1,res[y+1][x], minstep(res[y+1][x], 
+                    dungeon[y][x])])
+                res[y][x] = min([it[3] for it in tmp])
+                print(x,y,tmp)
+        print(dungeon)
+        print(res)
+        return res[0][0]
+def minstep(res, dung):
+    print(res, dung)
+    return  max(res - dung, 1) if dung >= 0 else res - dung
+        

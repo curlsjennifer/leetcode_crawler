@@ -1,0 +1,18 @@
+class Solution(object):
+    def maxDistance(self, grid):
+        n = len(grid)
+        pos = [[i, j] for i in range(n) for j in range(n) if grid[i][j] == 1]
+        if len(pos) == n*n:return -1
+        dirc = [[-1, 0], [1, 0], [0, -1], [0, 1]]
+        res = 2
+        while pos:
+            pos = [[pp[0]+it[0], pp[1]+it[1]] for it in dirc for pp in pos]
+            pos = [p for p in pos if 0<=p[0]<n and 0<=p[1]<n and grid[p[0]][p[1]] == 
+                0]
+            pos2 = []
+            for it in pos:
+                if it not in pos2:pos2.append(it)
+            pos = pos2
+            for p in pos:grid[p[0]][p[1]] = res
+            res += 1
+        return res - 3

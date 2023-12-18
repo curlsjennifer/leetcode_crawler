@@ -1,0 +1,20 @@
+class Solution(object):
+    def isValidSudoku(self, board):
+        rec = [[0 for i in range(9)] for j in range(9)]
+        for i in range(9):
+            for j in range(9):
+                if board[i][j] != ".": rec[i][int(board[i][j])-1] += 1
+        if max([max(item) for item in rec]) > 1:return False
+        rec = [[0 for i in range(9)] for j in range(9)]
+        for i in range(9):
+            for j in range(9):
+                if board[j][i] != ".": rec[i][int(board[j][i])-1] += 1
+        if max([max(item) for item in rec]) > 1:return False
+        rec = [[0 for i in range(9)] for j in range(9)]
+        for i in range(9):
+            for j in range(9):
+                if board[i][j] != ".":rec[int(i/3) + int(j/3)*3][int(board[i][j])-1] 
+                    += 1
+        if max([max(item) for item in rec]) > 1:return False
+        return True
+        

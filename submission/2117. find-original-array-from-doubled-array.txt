@@ -1,0 +1,22 @@
+class Solution(object):
+    def findOriginalArray(self, changed):
+        if mod(len(changed), 2) == 1:return []
+        dirs = {}
+        sc = sorted(set(changed))
+        for it in sc:dirs[it] = 0
+        for it in changed:dirs[it] += 1
+        if 0 in sc and mod(dirs[0], 2) == 1:return []
+        res = [0 for i in range(dirs[0]/2)] if 0 in sc else []
+        if 0 in sc:sc.remove(0)
+        #print(dirs)
+        while len(sc) > 0:
+            it = sc.pop(0)
+            if it*2 in sc and dirs[it] <= dirs[it*2]:
+                res.extend([it for iii in range(dirs[it])])
+                if dirs[it] == dirs[it*2]:
+                    sc.remove(it*2)
+                else:
+                    dirs[it*2] -= dirs[it]
+            else:
+                return []
+        return res

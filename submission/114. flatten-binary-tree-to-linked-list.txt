@@ -1,0 +1,21 @@
+# Definition for a binary tree node.
+class TreeNode(object):
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+class Solution(object):
+    def flatten(self, root):
+        if root == None:return [None]
+        lst = self.order(root)
+        lst.reverse()
+        res = TreeNode(val=lst[0])
+        if len(lst) == 1:return res
+        for i in range(1, len(lst)-1):res = TreeNode(val=lst[i], right=res)
+        root.right = res
+        root.left = None
+        root.val = lst[-1]
+        #return res
+            def order(self, rr):
+        if rr == None:return []
+        return [rr.val] + self.order(rr.left) + self.order(rr.right)

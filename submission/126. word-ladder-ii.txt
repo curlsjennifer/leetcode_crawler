@@ -1,0 +1,48 @@
+# class Solution(object):
+#     def findLadders(self, beginWord, endWord, wordList, saveList = None):
+#         if not endWord in wordList:return []
+#         wordList = [item for item in wordList if not item == endWord] + [endWord]
+#         rec = [[beginWord]]
+#         while len(rec) > 0 and (not rec[0][-1] == wordList[-1]):
+#             rec = self.next(rec, wordList)
+#         return rec
+        #     def det(self, A, B):
+#         if not len(A) == len(B):
+#             return False
+#         res = len([1 for i in range(len(A)) if not A[i]==B[i]])
+#         return True if res == 1 else False
+        #     def next(self, begin, wordList):
+#         check = 0
+#         res = []
+#         for Item in begin:
+#             poss = [it for it in wordList if self.det(Item[-1], it) and it not in 
+    Item]
+#             if wordList[-1] in poss:
+#                 res.append(Item + [wordList[-1]])
+#                 check = 1
+#             else:
+#                 for item in poss:
+#                     res.append(Item + [item])
+        #         if check == 1:
+#             res = [it for it in res if it[-1] == wordList[-1]]
+#         return res
+    class Solution(object):
+    def findLadders(self, beginWord, endWord, wordList):
+        wordlist=set(wordList)
+        res= []
+        layer = {}
+        layer[beginWord] = [[beginWord]]
+                while layer:
+            newlayer = collections.defaultdict(list)
+            for w in layer:
+                if w == endWord:
+                    res.extend(k for k in layer[w])
+                else:
+                    for i in range(len(w)):
+                        for c in "abcdefghijklmnopqrstuvwxyz":
+                            newword=w[:i] + c + w[i+1:]
+                            if newword in wordlist:
+                                newlayer[newword] += [j+[newword] for j in layer[w]]
+            wordlist -=set(newlayer.keys())
+            layer = newlayer
+                    return res

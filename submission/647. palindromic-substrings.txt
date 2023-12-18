@@ -1,0 +1,27 @@
+class Solution(object):
+    def countSubstrings(self, s):
+        ll = len(s)
+        res = len(s)
+        idxo = [i for i in range(len(s)-1) if s[i]==s[i+1]]
+        res += len(idxo)
+        idxe = [i+1 for i in range(len(s)-2) if s[i]==s[i+2]]
+        res += len(idxe)
+        k = 1
+        while len(idxo) > 0:
+            idxo = [idx for idx in idxo if idx-k >= 0 and idx+k+1 < ll and s[idx-k]
+                ==s[idx+k+1]]
+            res += len(idxo)
+            k += 1
+                k = 2
+        while len(idxe) > 0:
+            idxe = [idx for idx in idxe if idx-k >= 0 and idx+k < ll and s[idx-k]
+                ==s[idx+k]]
+            res += len(idxe)
+            print(idxe)
+            k += 1        
+        return res
+        """
+        :type s: str
+        :rtype: int
+        """
+        

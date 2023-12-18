@@ -1,0 +1,26 @@
+class Solution(object):
+    def maximumSum(self, nums):
+        lst = [self.dig(it) for it in nums]
+        udig = list(set(lst))
+        udir = {}
+        for it in udig:udir[it] = []
+        for i in range(len(nums)):udir[lst[i]] = udir[lst[i]] + [nums[i]]
+        print(udir)
+                res = -1
+        for it in udig:
+            if len(udir[it]) > 1:
+                x1 = max(udir[it])
+                udir[it].remove(x1)
+                res = max(res, x1 + max(udir[it]))
+        return res
+    def dig(self, n):
+        res = 0
+        while n >= 10:
+            res += mod(n,10)
+            n = int(n/10)
+        return res + n
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        

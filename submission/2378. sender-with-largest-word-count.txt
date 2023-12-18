@@ -1,0 +1,7 @@
+class Solution(object):
+    def largestWordCount(self, messages, senders):
+        nums = [len(it.split(" ")) for it in messages]
+        name, dirs = sorted(set(senders)), {}
+        for it in name:dirs[it] = 0
+        for it in range(len(senders)):dirs[senders[it]] += nums[it]
+        return sorted(name, key=lambda x:dirs[x])[-1]

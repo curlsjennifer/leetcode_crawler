@@ -1,0 +1,13 @@
+class Solution(object):
+    def findDiagonalOrder(self, mat):
+        res, lst = [], []
+        for I in range(len(mat)+len(mat[0])):
+            if I < len(mat):lst = [mat[I]] + lst
+            lst = [it for it in lst if len(it) > 0]
+            rr = []
+            for J,it in enumerate(lst):
+                p = lst[J].pop(0)
+                rr.append(p)
+            if mod(I, 2) == 1:rr.reverse()
+            res.extend(rr)
+        return res

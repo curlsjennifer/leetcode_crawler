@@ -1,0 +1,12 @@
+class Solution(object):
+    def findMaxConsecutiveOnes(self, nums):
+        res = 0
+        maxr = 0
+        for it in nums:
+            if it == 1:
+                res += 1
+            else:
+                maxr = max(maxr, res)
+                res = 0
+        maxr = max(maxr, res)
+        return maxr

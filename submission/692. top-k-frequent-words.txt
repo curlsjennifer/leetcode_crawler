@@ -1,0 +1,6 @@
+class Solution(object):
+    def topKFrequent(self, words, k):
+        key0, dirs = sorted(set(words)), {}
+        for it in key0:dirs[it] = 0
+        for it in words:dirs[it] += 1
+        return sorted(key0, key = lambda x:dirs[x], reverse=True)[:k]

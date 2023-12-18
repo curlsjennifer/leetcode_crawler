@@ -1,0 +1,19 @@
+class Solution(object):
+    def pushDominoes(self, dom):
+        dom = "L" + dom + "R"
+        domn = ''
+        idxd = [i for i, it in enumerate(dom) if it == "L" or it == "R"]
+        for i in range(len(idxd)-1):
+            if dom[idxd[i]] == "R" and dom[idxd[i+1]] == "R":
+                domn += "R"*(idxd[i+1]-idxd[i])
+            elif dom[idxd[i]] == "L" and dom[idxd[i+1]] == "L":
+                domn += "L"*(idxd[i+1]-idxd[i])
+            elif dom[idxd[i]] == "L" and dom[idxd[i+1]] == "R":
+                domn += "L" + "."*(idxd[i+1]-idxd[i]-1)
+            else:
+                diff = idxd[i+1]-idxd[i]
+                if diff%2 == 0:
+                    domn += "R" + "R"*((diff-2)/2)+"."+"L"*((diff-2)/2)
+                else:
+                    domn += "R" + "R"*((diff-1)/2) + "L"*((diff-1)/2)
+        return domn[1:]

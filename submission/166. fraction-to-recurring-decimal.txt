@@ -1,0 +1,24 @@
+class Solution(object):
+    def fractionToDecimal(self, numerator, denominator):
+        sign = "-" if numerator*denominator < 0 else ""
+        numerator = -numerator if numerator < 0 else numerator
+        denominator = -denominator if denominator < 0 else denominator
+        integer = str(int(numerator/denominator))
+        if mod(numerator, denominator) == 0:return sign + integer
+        res = mod(numerator, denominator)
+        rec = []
+        txt = "."
+        while mod(res, denominator) > 0:
+            #print(txt, res)
+            txt0 = str(int(res*10/denominator))
+            res = mod(res*10, denominator)
+            rec.append([txt0, res])
+            if txt0 in txt:
+                if len(rec) > 1:
+                    resp = [[i, rec[i][1]] for i in range(len(rec)-1) if rec[i][0] == 
+                        txt0][0]
+                    if resp[1] == res:
+                        idx = resp[0]+1
+                        return sign + integer + txt[:idx] + "(" + txt[idx:] + ")"
+            txt = txt + txt0
+                    return sign + integer + txt

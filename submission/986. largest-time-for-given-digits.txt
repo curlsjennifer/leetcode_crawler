@@ -1,0 +1,14 @@
+class Solution(object):
+    def largestTimeFromDigits(self, arr0):
+        arr = range(4)
+        arr2 = range(4)
+        arr2 = [[it0] + [it1] for it0 in arr2 for it1 in arr if it0 != it1]
+        arr2 = [it0 + [it1] for it0 in arr2 for it1 in arr if it1 not in it0]
+        arr2 = [it0 + [it1 for it1 in arr if it1 not in it0] for it0 in arr2]
+        arr2 = [[arr0[i] for i in it] for it in arr2]
+        arr2 = [it + [it[0]*10+it[1], it[2]*10+it[3]] for it in arr2 if (it[0]*10
+            +it[1]<24) & (it[2]*10+it[3]<60)]
+        if len(arr2) == 0:return ""
+        arr2 = sorted(arr2, key=lambda x:x[4]*100+x[5])[-1]
+        print(arr2)
+        return str(arr2[0]) + str(arr2[1]) + ":" + str(arr2[2]) + str(arr2[3])

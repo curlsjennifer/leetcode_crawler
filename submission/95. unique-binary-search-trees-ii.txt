@@ -1,0 +1,21 @@
+# Definition for a binary tree node.
+class TreeNode(object):
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+class Solution(object):
+    def generateTrees(self, n):
+        return self.gt(n, 1)
+    def gt(self, n, st):
+        if n == 1:return [TreeNode(val=st)]
+        if n == 0:return [None]
+        res = []
+        for i in range(0, n):
+            tnl = self.gt(i, st)
+            tnr = self.gt(n-1-i, i+1+st)
+            rec0 = []
+            for itl in tnl:
+                for itr in tnr:rec0.append(TreeNode(val=i+st, left=itl, right=itr))
+            res.extend(rec0)
+        return res

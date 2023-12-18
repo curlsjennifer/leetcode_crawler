@@ -1,0 +1,25 @@
+# Definition for a binary tree node.
+# class TreeNode(object):
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution(object):
+    def maximumAverageSubtree(self, root):
+        self.res = -float("inf")
+        self.mos(root)
+        return self.res
+    def mos(self, root):
+        if root == None:return [0,0]
+        if root.left == None and root.right == None:
+            self.res = max(self.res, root.val)
+            return [root.val, 1]
+        left, right = self.mos(root.left), self.mos(root.right)
+        res = [left[0]+right[0]+root.val, left[1]+right[1]+1]
+        self.res = max(self.res, 1.0*res[0]/res[1])
+        return res
+        """
+        :type root: TreeNode
+        :rtype: float
+        """
+        

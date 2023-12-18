@@ -1,0 +1,15 @@
+class Solution(object):
+    def isOneEditDistance(self, s, t):
+        if s == t:return False
+        if -2 < len(s) - len(t) < 2:
+            if len(t) == len(s) + 1:s, t = t, s
+            if len(s) != len(t) :t = t + "@"
+            for j in range(len(s)):
+                if s[j] != t[j]:
+                    if t[-1] != "@":t = t[:j] + t[j+1:]
+                    s = s[:j] + s[j+1:]
+                    break
+            if len(t) != len(s):t = t[:-1]
+            return True if s == t else False
+        return False
+        

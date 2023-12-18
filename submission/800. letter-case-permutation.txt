@@ -1,0 +1,9 @@
+class Solution(object):
+    def letterCasePermutation(self, s):
+        lst = [""]
+        for i in range(len(s)):
+            if s[i].isdigit():
+                lst = [it+s[i] for it in lst]
+            else:
+                lst = [it+it2 for it in lst for it2 in [s[i].lower(), s[i].upper()]]
+        return lst

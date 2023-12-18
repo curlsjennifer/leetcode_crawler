@@ -1,0 +1,26 @@
+class Solution(object):
+    def countCompleteComponents(self, n, edges):
+        if n == 1:return 1
+        dirs = {}
+        dir2 = {}
+        for i in range(n):dirs[i] = [i]
+        for i in range(n):dir2[i] = [i]
+        rec = [i for i in range(n)]
+        for ed in edges:
+            dir2[ed[0]].append(ed[1])
+            dir2[ed[1]].append(ed[0])
+            i, j = rec[ed[0]], rec[ed[1]]
+            info1 = dirs[i]
+            info2 = dirs[j]
+            for ii in info2:rec[ii] = rec[i]
+            dirs[i] = list(set(info1 + info2))
+        chkg = [dirs[it] for it in set(rec)]
+        res = 0
+        for gp in chkg:
+            chk = 1
+            for node in gp:
+                if len([it for it in gp if it not in dir2[node]]) > 0:
+                    chk = 0
+                    break
+            res += chk
+        return res

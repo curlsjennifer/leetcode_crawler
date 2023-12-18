@@ -1,0 +1,18 @@
+# Definition for singly-linked list.
+class ListNode(object):
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+class Solution(object):
+    def partition(self, head, x):
+        if head == None:return None
+        if head.next == None:return head
+        rec = []
+        while head != None:
+            rec.append(head.val)
+            head = head.next
+        rec = [i for i in rec if i < x] + [i for i in rec if i >= x]
+        rec.reverse()
+        res = ListNode(val=rec[0])
+        for i in rec[1:]:res = ListNode(val=i, next=res)
+        return res

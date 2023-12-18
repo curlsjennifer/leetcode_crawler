@@ -1,0 +1,27 @@
+class Solution(object):
+    def reorganizeString(self, s):
+        dirs, key, ll = {}, set(s), len(s)
+        if len(key) == 1:return s if len(s) == 1 else ""
+        for it in key:dirs[it] = 0
+        for it in s:dirs[it] += 1
+        key = sorted(key, key=lambda x:dirs[x], reverse=True)
+        for it in key:
+            if dirs[it]*2 -1 > ll:return ""
+        txt, rst = [key[0]] * dirs[key[0]], ll-dirs[key[0]]
+        txt2 = [[k] * dirs[k] for k in key[1:]]
+        txt2 = [it for item in txt2 for it in item]
+        ll = min(len(txt), len(txt2))
+        for i in range(ll):
+            p = txt2.pop(0)
+            txt.insert(2*i+1, p)
+        while len(txt2) > 0:
+            ll = min(len(txt), len(txt2))
+            for i in range(ll):
+                p = txt2.pop(0)
+                txt.insert(2*i, p)
+        return "".join(txt)
+                """
+        :type s: str
+        :rtype: str
+        """
+        

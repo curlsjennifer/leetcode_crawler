@@ -1,0 +1,14 @@
+class Solution(object):
+    def minimumOperations(self, nums):
+        n = 0
+        while max(nums) > 0:
+            nums = [it for it in nums if it > 0]
+            mini = min(nums)
+            nums = [it-mini for it in nums]
+            n+=1
+        return n
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        

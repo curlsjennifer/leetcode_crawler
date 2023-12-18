@@ -1,0 +1,8 @@
+class Solution(object):
+    def canPermutePalindrome(self, s):
+        key = set([si for si in s])
+        dirs = {}
+        for it in key:dirs[it] = 0
+        for it in s:dirs[it] += 1
+        nums = [1 for it in key if mod(dirs[it],2) == 1]
+        return False if len(nums) > 1 else True

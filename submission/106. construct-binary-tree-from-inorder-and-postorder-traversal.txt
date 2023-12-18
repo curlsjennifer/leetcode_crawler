@@ -1,0 +1,23 @@
+# Definition for a binary tree node.
+class TreeNode(object):
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+class Solution(object):
+    def buildTree(self, inorder, postorder):
+        if len(postorder) == 0:return None
+        if len(postorder) == 1:return TreeNode(val=postorder[0], left=None, right
+            =None)
+        center = postorder[-1]
+        if center == inorder[0]:
+            left, right = None, self.buildTree(inorder[1:], postorder[:-1])
+        elif center == inorder[-1]:
+            left, right = self.buildTree(inorder[:-1], postorder[:-1]), None
+        else:
+            cidx = [i for i, it in enumerate(inorder) if it == center][0]
+            leftin, rightin = inorder[:cidx], inorder[cidx+1:]
+            left = self.buildTree(leftin, [it for it in postorder if it in leftin])
+            right = self.buildTree(rightin, [it for it in postorder[:-1] if it in 
+                rightin])
+        return TreeNode(val=center, left=left, right=right)

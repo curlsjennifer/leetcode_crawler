@@ -1,0 +1,17 @@
+import random
+class Solution(object):
+    def __init__(self, nums):
+        unums = list(set(nums))
+        dirs = {}
+        for it in unums:dirs[it] = []
+        for i, it in enumerate(nums):dirs[it].append(i)
+        self.dirs = dirs
+    def pick(self, target):
+        return random.choice(self.dirs[target])
+        """
+        :type target: int
+        :rtype: int
+        """
+        # Your Solution object will be instantiated and called as such:
+# obj = Solution(nums)
+# param_1 = obj.pick(target)

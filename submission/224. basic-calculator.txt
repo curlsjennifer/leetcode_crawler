@@ -1,0 +1,19 @@
+class Solution(object):
+    def calculate(self, s):
+        #print(s)
+        while ")" in s:
+            txt = s.split(")")[0].split("(")[-1]
+            #print(s, txt)
+            s = s.replace("(" + txt + ")", str(self.calculate(txt)))
+        s = s.replace("+", " + ").replace("-", " - ")
+        sl = " ".join([item for item in s.split(" ") if len(item) > 0])
+        sl = sl.replace("+ -", "-").replace("- -", "+").split(" ")
+        ans = 0
+        sl = sl if sl[0] in ["+", "-"] else ["+"] + sl
+        #print("AAAAAAAA", s, sl)
+        for i in range(len(sl)):
+            #print("BBBBB", i, sl[i], ans)
+            if sl[i] == "-":ans -= int(sl[i+1])
+            if sl[i] == "+":ans += int(sl[i+1])
+        return ans
+        

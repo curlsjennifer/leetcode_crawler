@@ -1,0 +1,27 @@
+class Solution(object):
+    def largestDivisibleSubset(self, nums):
+        self.nums = sorted(nums)
+        self.res = [-1] * len(nums)
+        self.point = [-1] * len(nums)
+        self.res[-1] = 1
+        idx, self.ll = 0, len(nums)
+        for idx in range(self.ll-1):
+            if self.res[idx] > -1:continue
+            self.ls(idx)
+                maxl = max(self.res)
+        seed = [i for i in range(self.ll) if self.res[i]==maxl][0]
+        res = [seed]
+        while self.point[res[-1]] >= 0:res.append(self.point[res[-1]])
+        return [self.nums[i] for i in res]
+    def ls(self, iidx):
+        if self.res[iidx] > -1:return self.res[iidx]
+        res = [[i, self.ls(i)] for i in range(iidx+1, self.ll) if mod(self.nums[i], 
+            self.nums[iidx]) == 0]
+        if len(res) == 0:
+            self.res[iidx] = 1
+            return 1
+                maxr = max([it[1] for it in res])
+        idx = [it[0] for it in res if it[1] == maxr][0]
+        self.point[iidx] = idx
+        self.res[iidx] = maxr + 1
+        return self.res[iidx]

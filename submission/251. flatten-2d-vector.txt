@@ -1,0 +1,7 @@
+class Vector2D(object):
+    def __init__(self, vec):
+        self.vec = [it for item in vec for it in item]
+    def next(self):
+        return self.vec.pop(0)
+    def hasNext(self):
+        return True if len(self.vec) > 0 else False

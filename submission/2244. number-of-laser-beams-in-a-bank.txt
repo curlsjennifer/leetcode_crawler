@@ -1,0 +1,7 @@
+class Solution(object):
+    def numberOfBeams(self, bank):
+                sum0 = [sum([int(it) for it in item]) for item in bank]
+        sum0 = [item for item in sum0 if item > 0]
+        if len(sum0) <= 1:return 0
+        return sum([sum0[I-1]*sum0[I] for I in range(1, len(sum0))])
+        

@@ -1,0 +1,10 @@
+class Solution(object):
+    def computeArea(self, ax1, ay1, ax2, ay2, bx1, by1, bx2, by2):
+        if (by1 >= ay2) | (ay1 >= by2) | (bx1 >= ax2) | (ax1 >= bx2) | (ax1 == ax2) | 
+            (ay1 == ay2) | (bx1 == bx2) | (by1 == by2):
+            area = 0
+        else:
+            area = (min(ax2, bx2)-max(ax1, bx1))*(min(ay2, by2)-max(ay1, by1))
+        return (by2-by1)*(bx2-bx1) + (ay2-ay1)*(ax2-ax1) - area
+    def pos(self, n):
+        return n if n > 0 else 0

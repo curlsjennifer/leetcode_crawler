@@ -1,0 +1,12 @@
+class Solution(object):
+    def isStrobogrammatic(self, num):
+        lst = [2,3,4,5,7]
+        symm = num[::-1].replace("6", "@").replace("9", "6").replace("@", "9")
+        for ii in set([it for it in num]):
+            if int(ii) in lst:return False
+        return True if symm == num else False
+        """
+        :type num: str
+        :rtype: bool
+        """
+        

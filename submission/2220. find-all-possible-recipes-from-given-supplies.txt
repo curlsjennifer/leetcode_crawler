@@ -1,0 +1,21 @@
+class Solution(object):
+    def findAllRecipes(self, recipes, ingredients, supplies):
+        supplies = set(supplies)
+        ingredients = [set(item) for item in ingredients]
+        rec = set()
+        recl = 1
+        while recl != len(rec):
+            recl = len(rec)
+            new = [i for i in range(len(recipes)) if supplies.issuperset
+                (ingredients[i])]
+            ingredients = [ingredients[i] for i in range(len(recipes)) if i not in 
+                new]
+            news = [recipes[i] for i in new]
+            supplies = supplies.union(set(news))
+            rec = rec.union(set(news))
+            if len(ingredients) > 0:
+                recipes = [recipes[i] for i in range(len(recipes)) if i not in new]
+            else:
+                break;
+        return [item for item in rec]
+                    

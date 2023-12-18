@@ -1,0 +1,11 @@
+class SparseVector:
+    def __init__(self, nums):
+        print("R", nums)
+        self.dirs = {}
+        for i, it in enumerate(nums):
+            if it != 0:self.dirs[i] = it
+            # Return the dotProduct of two sparse vectors
+    def dotProduct(self, vec):
+        vecd = vec.dirs
+        uni = [it for it in self.dirs if it in vecd]
+        return sum([self.dirs[it]*vec.dirs[it] for it in uni])

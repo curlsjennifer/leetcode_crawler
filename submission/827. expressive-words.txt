@@ -1,0 +1,25 @@
+class Solution(object):
+    def expressiveWords(self, s, words):
+        tar = self.decode(s)
+        ww = [self.decode(it) for it in words]
+        res = 0
+        for item in ww:
+            flag = 1
+            if len(item) == len(tar):
+                for k, item2 in enumerate(item):
+                    if (tar[k][0] != item2[0]) or (tar[k][1]<3 and tar[k][1] != 
+                        item2[1]) or  (tar[k][1] >= 3 and tar[k][1] < item2[1]):
+                        flag = -1
+                        break
+            else:
+                flag = -1
+            if flag == 1:res += 1
+        return res
+    def decode(self, s):
+        s, res, idx = s+"@", [], -1
+        for i in range(len(s)-1):
+            if s[i] != s[i+1]:
+                res.append([s[i], i-idx])
+                idx = i
+        return res
+        

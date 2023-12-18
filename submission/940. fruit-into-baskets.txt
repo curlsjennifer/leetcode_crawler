@@ -1,0 +1,24 @@
+class Solution(object):
+    def totalFruit(self, fruits):
+        print("AHHHHHHHHHHHHHH")
+        ss = set(fruits)
+        if len(ss) < 3:return len(fruits)
+        init = sorted(set(fruits[:2]))
+        dirs, res = [], 0
+        if len(init) == 1:dirs = [[2, init[0]]]
+        if len(init) == 2:dirs = [[2, init[0], init[1]], [1, fruits[1]]]
+        for i in range(2, len(fruits)):
+            inside = 0
+            dnew = []
+            for kk in dirs:
+                for ii in range(1, len(kk)):
+                    if kk[ii] == fruits[i]:
+                        dnew.append([kk[0]+1] + kk[1:])
+                        if len(kk) == 2:inside = 1
+                    elif len(kk) == 2:
+                        dnew.append([kk[0]+1, min(kk[1], fruits[i]), max(kk[1], 
+                            fruits[i])])
+            if inside == 0:dnew.append([1, fruits[i]])
+            res = max(res, max([it[0] for it in dnew]))
+            dirs = [it for it in dnew]
+        return res

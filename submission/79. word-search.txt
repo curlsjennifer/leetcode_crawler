@@ -1,0 +1,20 @@
+class Solution(object):
+    def exist(self, board, word):
+        uwd = set([it for it in word])
+        ub = set([item for sublist in board for item in sublist])
+        for iuwd in uwd:
+            if iuwd not in ub:return False
+                for y in xrange(len(board)):
+            for x in xrange(len(board[0])):
+                if self.exit(board, word, x, y, 0):return True
+    def exit(self, board, word, x, y, i):
+        dirc = [[0, 1], [0, -1], [-1, 0], [1, 0]]
+        if i == len(word):return True
+        if (x < 0) or (x >= len(board[0])) or (y < 0) or (y >= len(board)):return 
+            False
+        if board[y][x] != word[i]:return False
+        board[y][x] = board[y][x] + "////"
+        isexit = any([self.exit(board, word, x+dirc[j][0], y+dirc[j][1], i+1) for j 
+            in range(4)])
+        board[y][x] = board[y][x].replace("////", "")
+        return isexit

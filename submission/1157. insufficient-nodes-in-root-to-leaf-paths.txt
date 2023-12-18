@@ -1,0 +1,25 @@
+# Definition for a binary tree node.
+class TreeNode(object):
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+class Solution(object):
+    def sufficientSubset(self, root, limit):
+        self.limit = limit
+        rootn, lbl  = self.ss(root,0)
+        return rootn
+    def ss(self, root, val):
+        if root == None :return (None, 0)
+        valn = root.val + val
+        if root.left == None and root.right == None:
+            return (root, "L") if valn >= self.limit else (None, "D")
+        lroot, lval = self.ss(root.left, valn)
+        rroot, rval = self.ss(root.right, valn)
+        #print(root.val, valn, lroot, rroot, lval, rval)
+        if lval != "L" and rval != "L":
+            return (None, "D")
+        ans = "L"
+        if lval == 0:ans = rval
+        if rval == 0:ans = lval
+        return (TreeNode(val=root.val, left=lroot, right=rroot), ans)

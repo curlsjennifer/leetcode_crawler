@@ -1,0 +1,29 @@
+# Definition for a binary tree node.
+class TreeNode(object):
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+class Solution(object):
+    def isValidBST(self, root):
+        tb = self.ivb(root)
+        if tb == False:return False
+        return True
+                def ivb(self, root):
+        if root == None:return None
+        leftv = self.ivb(root.left)
+        if leftv == False:return False
+        rightv = self.ivb(root.right)
+        if rightv == False:return False     
+        if (leftv == None) & (rightv != None):
+            if rightv.left <= root.val:return False
+            return TreeNode(val="A", left=root.val, right=rightv.right)
+        if (leftv != None) & (rightv == None):
+            if leftv.right >= root.val:return False
+            return TreeNode(val="A", left=leftv.left, right=root.val)  
+        if (leftv == None) & (rightv == None):
+            return TreeNode(val="A", left=root.val, right=root.val)  
+        if rightv.left <= root.val:return False
+        if leftv.right >= root.val:return False
+        return TreeNode(val="A", left=min(root.val, leftv.left), right=max(root.val, 
+            rightv.right))       

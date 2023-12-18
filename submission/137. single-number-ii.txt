@@ -1,0 +1,9 @@
+class Solution(object):
+    def singleNumber(self, nums):
+        for it in nums:
+            if nums.count(it) == 1:return it
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        

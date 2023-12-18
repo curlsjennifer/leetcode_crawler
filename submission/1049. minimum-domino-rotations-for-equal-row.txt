@@ -1,0 +1,15 @@
+class Solution(object):
+    def minDominoRotations(self, ts, bs):
+        for seed in [ts[0], bs[0]]:
+            s0 = seed
+            for i in range(len(ts)):
+                if seed not in [ts[i], bs[i]]:
+                    s0 = -1
+                    break
+            if s0 != -1:break
+        if s0 == -1:return -1
+        rt, rb = 0, 0
+        for i in range(len(ts)):
+            if ts[i] != s0:rt += 1
+            if bs[i] != s0:rb += 1
+        return min(rt, rb)

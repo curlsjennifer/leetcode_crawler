@@ -1,0 +1,15 @@
+class Solution(object):
+    def isPalindrome(self, x):
+        if x < 0 :return False
+        if x == 0:return True
+        if mod(x, 10) == 0:return False
+        xt = str(x)
+        ll = len(xt)-1
+        for i in range(int((ll+1)/2)):
+            if xt[i] != xt[ll-i]:return False
+        return True
+        """
+        :type x: int
+        :rtype: bool
+        """
+        

@@ -1,0 +1,319 @@
+title,title_slug,lang_name,timestamp,status_display,runtime,question_id,question__title,Difficulity,memory,submission_id
+Valid Number,valid-number,Python,1622966811,Accepted,20.06 %,65,Valid Number,3,22.09 %,503780913.0
+Sum of Floored Pairs,sum-of-floored-pairs,Python,1622968167,Accepted,0 %,1326,Sum of Floored Pairs,3,0 %,503790072.0
+Interleaving String,interleaving-string,Python,1623524851,Accepted,0 %,97,Interleaving String,2,0 %,506957027.0
+Word Ladder II,word-ladder-ii,Python,1623814233,Accepted,40.59 %,126,Word Ladder II,3,26.73 %,508574465.0
+Two Sum,two-sum,Python,1629043955,Accepted,0 %,1,Two Sum,1,0 %,538942789.0
+Reverse Integer,reverse-integer,Python,1629044769,Accepted,56.14 %,7,Reverse Integer,2,50.32 %,538947922.0
+Roman to Integer,roman-to-integer,Python,1629299990,Accepted,0 %,13,Roman to Integer,1,0 %,540458742.0
+Median of Two Sorted Arrays,median-of-two-sorted-arrays,Python,1653842894,Accepted,0 %,4,Median of Two Sorted Arrays,3,0 %,709897067.0
+Group Anagrams,group-anagrams,Python,1688299110,Accepted,15.68 %,49,Group Anagrams,2,50.57 %,984509902.0
+Maximum Gap,maximum-gap,Python,1688300431,Accepted,34.60 %,164,Maximum Gap,2,45.57 %,984521935.0
+Contains Duplicate III,contains-duplicate-iii,Python,1688314268,Accepted,0 %,220,Contains Duplicate III,3,0 %,984658923.0
+"Pow(x, n)",powx-n,Python,1696312395,Accepted,6.66 %,50,"Pow(x, n)",2,54.26 %,1065606081.0
+Basic Calculator,basic-calculator,Python,1696338702,Accepted,0 %,224,Basic Calculator,3,0 %,1065876396.0
+Word Ladder,word-ladder,Python,1696431868,Accepted,0 %,127,Word Ladder,3,0 %,1066888685.0
+Dungeon Game,dungeon-game,Python,1696439010,Accepted,16.25 %,174,Dungeon Game,3,98.75 %,1066990967.0
+Maximal Rectangle,maximal-rectangle,Python,1696441689,Accepted,7.78 %,85,Maximal Rectangle,3,45.56 %,1067034852.0
+Set Matrix Zeroes,set-matrix-zeroes,Python,1696779289,Accepted,71.73 %,73,Set Matrix Zeroes,2,51.02 %,1070226777.0
+Number of Laser Beams in a Bank,number-of-laser-beams-in-a-bank,Python,1696780362,Accepted,0 %,2244,Number of Laser Beams in a Bank,2,0 %,1070237197.0
+Find All Possible Recipes from Given Supplies,find-all-possible-recipes-from-given-supplies,Python,1696784081,Accepted,0 %,2220,Find All Possible Recipes from Given Supplies,2,0 %,1070275167.0
+Search a 2D Matrix,search-a-2d-matrix,Python,1696831000,Accepted,93.24 %,74,Search a 2D Matrix,2,85.36 %,1070683422.0
+Search a 2D Matrix II,search-a-2d-matrix-ii,Python,1696831796,Accepted,95.98 %,240,Search a 2D Matrix II,2,31.49 %,1070691961.0
+Longest Increasing Path in a Matrix,longest-increasing-path-in-a-matrix,Python,1696913025,Accepted,44.15 %,329,Longest Increasing Path in a Matrix,3,56.43 %,1071513863.0
+Number of Increasing Paths in a Grid,number-of-increasing-paths-in-a-grid,Python,1696915671,Accepted,0 %,2409,Number of Increasing Paths in a Grid,3,0 %,1071540969.0
+Integer to Roman,integer-to-roman,Python,1696949932,Accepted,18.30 %,12,Integer to Roman,2,23.83 %,1071872475.0
+Permutation Sequence,permutation-sequence,Python,1696953446,Accepted,75.19 %,60,Permutation Sequence,3,85.56 %,1071915905.0
+Unique Paths,unique-paths,Python,1696953960,Accepted,98.87 %,62,Unique Paths,2,99.68 %,1071922450.0
+Unique Paths II,unique-paths-ii,Python,1696958037,Accepted,22.27 %,63,Unique Paths II,2,47.77 %,1071977519.0
+Divide Two Integers,divide-two-integers,Python,1696960140,Accepted,79.17 %,29,Divide Two Integers,2,95.03 %,1072009075.0
+Next Permutation,next-permutation,Python,1696961194,Accepted,40.82 %,31,Next Permutation,2,82.39 %,1072024900.0
+Permutations,permutations,Python,1696962573,Accepted,20.09 %,46,Permutations,2,79.59 %,1072044933.0
+Permutations II,permutations-ii,Python,1696963196,Accepted,15.27 %,47,Permutations II,2,35.32 %,1072053241.0
+Add Two Numbers,add-two-numbers,Python,1697001084,Accepted,8.80 %,2,Add Two Numbers,2,99.36 %,1072372645.0
+Sudoku Solver,sudoku-solver,Python,1697044830,Accepted,27.95 %,37,Sudoku Solver,3,92.56 %,1072808674.0
+Rotate Image,rotate-image,Python,1697046583,Accepted,17.79 %,48,Rotate Image,2,83.11 %,1072833702.0
+Sort Colors,sort-colors,Python,1697046771,Accepted,49.68 %,75,Sort Colors,2,78.49 %,1072836392.0
+Combinations,combinations,Python,1697047756,Accepted,0 %,77,Combinations,2,0 %,1072850599.0
+Rotate List,rotate-list,Python,1697085757,Accepted,27.82 %,61,Rotate List,2,14.54 %,1073171402.0
+Remove Duplicates from Sorted List II,remove-duplicates-from-sorted-list-ii,Python,1697087298,Accepted,0 %,82,Remove Duplicates from Sorted List II,2,0 %,1073187138.0
+Search in Rotated Sorted Array II,search-in-rotated-sorted-array-ii,Python,1697112872,Accepted,6.50 %,81,Search in Rotated Sorted Array II,2,52.24 %,1073425809.0
+Search in Rotated Sorted Array,search-in-rotated-sorted-array,Python,1697113865,Accepted,31.95 %,33,Search in Rotated Sorted Array,2,49.85 %,1073434482.0
+Spiral Matrix,spiral-matrix,Python,1697432372,Accepted,79.00 %,54,Spiral Matrix,2,56.86 %,1076390594.0
+Spiral Matrix II,spiral-matrix-ii,Python,1697434554,Accepted,17.45 %,59,Spiral Matrix II,2,84.71 %,1076412449.0
+Valid Sudoku,valid-sudoku,Python,1697442886,Accepted,11.41 %,36,Valid Sudoku,2,82.05 %,1076496065.0
+Count and Say,count-and-say,Python,1697446880,Accepted,54.92 %,38,Count and Say,2,12.47 %,1076531352.0
+Merge Intervals,merge-intervals,Python,1697531193,Accepted,53.42 %,56,Merge Intervals,2,17.35 %,1077369079.0
+Insert Interval,insert-interval,Python,1697535321,Accepted,44.42 %,57,Insert Interval,2,68.47 %,1077406326.0
+Container With Most Water,container-with-most-water,Python,1697556969,Accepted,0 %,11,Container With Most Water,2,0 %,1077627941.0
+Zigzag Conversion,zigzag-conversion,Python,1697557992,Accepted,15.18 %,6,Zigzag Conversion,2,23.52 %,1077640618.0
+Trapping Rain Water,trapping-rain-water,Python,1697559398,Accepted,18.99 %,42,Trapping Rain Water,3,20.43 %,1077658746.0
+Merge k Sorted Lists,merge-k-sorted-lists,Python,1697564857,Accepted,20.76 %,23,Merge k Sorted Lists,3,25.80 %,1077734364.0
+Reverse Nodes in k-Group,reverse-nodes-in-k-group,Python,1697565737,Accepted,0 %,25,Reverse Nodes in k-Group,3,0 %,1077747187.0
+Swap Nodes in Pairs,swap-nodes-in-pairs,Python,1697565823,Accepted,15.49 %,24,Swap Nodes in Pairs,2,70.52 %,1077748488.0
+Swapping Nodes in a Linked List,swapping-nodes-in-a-linked-list,Python,1697566158,Accepted,0 %,528,Swapping Nodes in a Linked List,2,0 %,1077753516.0
+Remove Nth Node From End of List,remove-nth-node-from-end-of-list,Python,1697566463,Accepted,93.00 %,19,Remove Nth Node From End of List,2,57.01 %,1077758072.0
+Reverse Nodes in Even Length Groups,reverse-nodes-in-even-length-groups,Python,1697567471,Accepted,0 %,2196,Reverse Nodes in Even Length Groups,2,0 %,1077772505.0
+Deepest Leaves Sum,deepest-leaves-sum,Python,1697607373,Accepted,66.67 %,1254,Deepest Leaves Sum,2,99.13 %,1078114438.0
+Multiply Strings,multiply-strings,Python,1697617127,Accepted,29.50 %,43,Multiply Strings,2,62.23 %,1078207121.0
+Letter Combinations of a Phone Number,letter-combinations-of-a-phone-number,Python,1697643092,Accepted,45.18 %,17,Letter Combinations of a Phone Number,2,83.00 %,1078449870.0
+Generate Parentheses,generate-parentheses,Python,1697644388,Accepted,14.83 %,22,Generate Parentheses,2,77.93 %,1078465055.0
+Check if a Parentheses String Can Be Valid,check-if-a-parentheses-string-can-be-valid,Python,1697647309,Accepted,0 %,2221,Check if a Parentheses String Can Be Valid,2,0 %,1078500224.0
+Valid Parenthesis String,valid-parenthesis-string,Python,1697647750,Accepted,25.48 %,678,Valid Parenthesis String,2,64.97 %,1078505781.0
+Rotate Array,rotate-array,Python,1697652990,Accepted,19.12 %,189,Rotate Array,2,74.58 %,1078575390.0
+Gray Code,gray-code,Python,1697653411,Accepted,60.29 %,89,Gray Code,2,72.79 %,1078581158.0
+Rectangle Area,rectangle-area,Python,1697655086,Accepted,0 %,223,Rectangle Area,2,0 %,1078602220.0
+Rectangle Overlap,rectangle-overlap,Python,1697655324,Accepted,53.85 %,866,Rectangle Overlap,1,83.08 %,1078604968.0
+Integer Break,integer-break,Python,1697658337,Accepted,10.62 %,343,Integer Break,2,79.20 %,1078638110.0
+Find First and Last Position of Element in Sorted Array,find-first-and-last-position-of-element-in-sorted-array,Python,1697691028,Accepted,88.60 %,34,Find First and Last Position of Element in Sorted Array,2,74.88 %,1078900704.0
+Partition List,partition-list,Python,1697731536,Accepted,82.98 %,86,Partition List,2,18.38 %,1079285540.0
+Reverse Linked List II,reverse-linked-list-ii,Python,1697732132,Accepted,53.68 %,92,Reverse Linked List II,2,88.10 %,1079291950.0
+Minimum Path Sum,minimum-path-sum,Python,1697733154,Accepted,6.06 %,64,Minimum Path Sum,2,24.12 %,1079303461.0
+Triangle,triangle,Python,1697776928,Accepted,56.51 %,120,Triangle,2,41.02 %,1079677686.0
+Sqrt(x),sqrtx,Python,1697818646,Accepted,42.00 %,69,Sqrt(x),1,93.10 %,1080023943.0
+Subsets,subsets,Python,1697820254,Accepted,36.90 %,78,Subsets,2,99.24 %,1080040071.0
+Text Justification,text-justification,Python,1697822774,Accepted,69.44 %,68,Text Justification,3,31.14 %,1080066951.0
+Path Sum II,path-sum-ii,Python,1697826405,Accepted,51.48 %,113,Path Sum II,2,92.22 %,1080107522.0
+Remove Duplicates from Sorted Array II,remove-duplicates-from-sorted-array-ii,Python,1697988979,Accepted,98.02 %,80,Remove Duplicates from Sorted Array II,2,36.45 %,1081422617.0
+Factorial Trailing Zeroes,factorial-trailing-zeroes,Python,1697989555,Accepted,39.54 %,172,Factorial Trailing Zeroes,2,63.45 %,1081428172.0
+Binary Tree Level Order Traversal II,binary-tree-level-order-traversal-ii,Python,1697993223,Accepted,94.85 %,107,Binary Tree Level Order Traversal II,2,91.91 %,1081462464.0
+Binary Tree Level Order Traversal,binary-tree-level-order-traversal,Python,1697993403,Accepted,72.89 %,102,Binary Tree Level Order Traversal,2,81.97 %,1081464255.0
+Binary Tree Zigzag Level Order Traversal,binary-tree-zigzag-level-order-traversal,Python,1697994147,Accepted,46.82 %,103,Binary Tree Zigzag Level Order Traversal,2,91.81 %,1081471563.0
+Flatten Binary Tree to Linked List,flatten-binary-tree-to-linked-list,Python,1697995399,Accepted,14.89 %,114,Flatten Binary Tree to Linked List,2,99.37 %,1081485276.0
+Reorder List,reorder-list,Python,1698082453,Accepted,0 %,143,Reorder List,2,0 %,1082329290.0
+Sort List,sort-list,Python,1698082804,Accepted,0 %,148,Sort List,2,0 %,1082334181.0
+Evaluate Reverse Polish Notation,evaluate-reverse-polish-notation,Python,1698085467,Accepted,0 %,150,Evaluate Reverse Polish Notation,2,0 %,1082371766.0
+3Sum,3sum,Python,1698227753,Accepted,10.34 %,15,3Sum,2,15.86 %,1083709279.0
+Longest Substring Without Repeating Characters,longest-substring-without-repeating-characters,Python,1698297468,Accepted,11.91 %,3,Longest Substring Without Repeating Characters,2,10.73 %,1084355558.0
+Fraction to Recurring Decimal,fraction-to-recurring-decimal,Python,1698320258,Accepted,0 %,166,Fraction to Recurring Decimal,2,0 %,1084556660.0
+Count Primes,count-primes,Python,1698321146,Accepted,42.40 %,204,Count Primes,2,32.14 %,1084563819.0
+Basic Calculator II,basic-calculator-ii,Python,1698329937,Accepted,29.42 %,227,Basic Calculator II,2,8.65 %,1084647760.0
+Count Numbers with Unique Digits,count-numbers-with-unique-digits,Python,1698343412,Accepted,0 %,357,Count Numbers with Unique Digits,2,0 %,1084797735.0
+Find Peak Element,find-peak-element,Python,1698343889,Accepted,26.32 %,162,Find Peak Element,2,94.65 %,1084803957.0
+Compare Version Numbers,compare-version-numbers,Python,1698344479,Accepted,75.00 %,165,Compare Version Numbers,2,80.92 %,1084811589.0
+Reverse Words in a String,reverse-words-in-a-string,Python,1698345432,Accepted,88.68 %,151,Reverse Words in a String,2,75.98 %,1084823530.0
+Restore IP Addresses,restore-ip-addresses,Python,1698385053,Accepted,36.73 %,93,Restore IP Addresses,2,50.91 %,1085133486.0
+Subsets II,subsets-ii,Python,1698386291,Accepted,59.93 %,90,Subsets II,2,86.89 %,1085145982.0
+Two Sum II - Input Array Is Sorted,two-sum-ii-input-array-is-sorted,Python,1698428384,Accepted,0 %,167,Two Sum II - Input Array Is Sorted,2,0 %,1085531736.0
+Rotate Function,rotate-function,Python,1698598214,Accepted,0 %,396,Rotate Function,2,0 %,1086947357.0
+Elimination Game,elimination-game,Python,1698600078,Accepted,34.48 %,390,Elimination Game,2,60.34 %,1086967772.0
+Shuffle an Array,shuffle-an-array,Python,1698601092,Accepted,33.68 %,384,Shuffle an Array,2,60.10 %,1086979288.0
+Random Pick Index,random-pick-index,Python,1698601894,Accepted,14.47 %,398,Random Pick Index,2,13.16 %,1086988600.0
+String to Integer (atoi),string-to-integer-atoi,Python,1698639394,Accepted,54.55 %,8,String to Integer (atoi),2,88.47 %,1087276467.0
+Longest Palindromic Substring,longest-palindromic-substring,Python,1698640579,Accepted,99.87 %,5,Longest Palindromic Substring,2,93.27 %,1087286557.0
+3Sum Closest,3sum-closest,Python,1698651472,Accepted,26.49 %,16,3Sum Closest,2,47.18 %,1087383269.0
+4Sum,4sum,Python,1698655820,Accepted,33.50 %,18,4Sum,2,70.25 %,1087417118.0
+Nth Digit,nth-digit,Python,1698679713,Accepted,94.23 %,400,Nth Digit,2,88.46 %,1087638393.0
+Random Point in Non-overlapping Rectangles,random-point-in-non-overlapping-rectangles,Python,1698774707,Accepted,0 %,914,Random Point in Non-overlapping Rectangles,2,0 %,1088541268.0
+Generate Random Point in a Circle,generate-random-point-in-a-circle,Python,1698775034,Accepted,0 %,915,Generate Random Point in a Circle,2,0 %,1088545562.0
+Random Pick with Weight,random-pick-with-weight,Python,1698776888,Accepted,0 %,912,Random Pick with Weight,2,0 %,1088569137.0
+Minimum Moves to Equal Array Elements,minimum-moves-to-equal-array-elements,Python,1698777939,Accepted,73.44 %,453,Minimum Moves to Equal Array Elements,2,15.63 %,1088581774.0
+Minimum Moves to Equal Array Elements II,minimum-moves-to-equal-array-elements-ii,Python,1698778253,Accepted,0 %,462,Minimum Moves to Equal Array Elements II,2,0 %,1088585295.0
+Combination Sum,combination-sum,Python,1698813847,Accepted,82.42 %,39,Combination Sum,2,95.30 %,1088851574.0
+Combination Sum II,combination-sum-ii,Python,1698814711,Accepted,81.91 %,40,Combination Sum II,2,74.40 %,1088859448.0
+Combination Sum III,combination-sum-iii,Python,1698816613,Accepted,19.62 %,216,Combination Sum III,2,81.24 %,1088876738.0
+Jump Game II,jump-game-ii,Python,1698820702,Accepted,6.42 %,45,Jump Game II,2,52.33 %,1088916367.0
+Max Sum of a Pair With Equal Sum of Digits,max-sum-of-a-pair-with-equal-sum-of-digits,Python,1698823739,Accepted,0 %,2473,Max Sum of a Pair With Equal Sum of Digits,2,0 %,1088944621.0
+Jump Game,jump-game,Python,1698826179,Accepted,48.55 %,55,Jump Game,2,99.13 %,1088963712.0
+Maximum Subarray,maximum-subarray,Python,1698828355,Accepted,67.67 %,53,Maximum Subarray,2,75.11 %,1088980519.0
+Simplify Path,simplify-path,Python,1698830894,Accepted,41.26 %,71,Simplify Path,2,45.69 %,1089001459.0
+Jump Game III,jump-game-iii,Python,1698834121,Accepted,0 %,1428,Jump Game III,2,0 %,1089028170.0
+Reordered Power of 2,reordered-power-of-2,Python,1698858909,Accepted,0 %,900,Reordered Power of 2,2,0 %,1089279645.0
+Word Search,word-search,Python,1698903104,Accepted,92.15 %,79,Word Search,2,39.54 %,1089655321.0
+Edit Distance,edit-distance,Python,1698940896,Accepted,10.95 %,72,Edit Distance,2,41.68 %,1089976406.0
+Unique Binary Search Trees,unique-binary-search-trees,Python,1698986981,Accepted,24.65 %,96,Unique Binary Search Trees,2,53.22 %,1090361259.0
+Unique Binary Search Trees II,unique-binary-search-trees-ii,Python,1698989753,Accepted,80.50 %,95,Unique Binary Search Trees II,2,58.16 %,1090386030.0
+Decode Ways,decode-ways,Python,1699171947,Accepted,17.89 %,91,Decode Ways,2,86.20 %,1091900289.0
+Validate Binary Search Tree,validate-binary-search-tree,Python,1699199783,Accepted,11.10 %,98,Validate Binary Search Tree,2,27.65 %,1092130981.0
+Construct Binary Tree from Preorder and Inorder Traversal,construct-binary-tree-from-preorder-and-inorder-traversal,Python,1699204826,Accepted,46.17 %,105,Construct Binary Tree from Preorder and Inorder Traversal,2,9.98 %,1092187464.0
+Construct Binary Tree from Inorder and Postorder Traversal,construct-binary-tree-from-inorder-and-postorder-traversal,Python,1699205511,Accepted,39.61 %,106,Construct Binary Tree from Inorder and Postorder Traversal,2,13.45 %,1092195594.0
+Convert Sorted List to Binary Search Tree,convert-sorted-list-to-binary-search-tree,Python,1699206449,Accepted,76.15 %,109,Convert Sorted List to Binary Search Tree,2,46.33 %,1092206639.0
+Populating Next Right Pointers in Each Node,populating-next-right-pointers-in-each-node,Python,1699242013,Accepted,39.25 %,116,Populating Next Right Pointers in Each Node,2,99.78 %,1092492346.0
+Populating Next Right Pointers in Each Node II,populating-next-right-pointers-in-each-node-ii,Python,1699246089,Accepted,73.95 %,117,Populating Next Right Pointers in Each Node II,2,40.45 %,1092529369.0
+Count Good Nodes in Binary Tree,count-good-nodes-in-binary-tree,Python,1699247025,Accepted,5.09 %,1544,Count Good Nodes in Binary Tree,2,94.52 %,1092538389.0
+Sum Root to Leaf Numbers,sum-root-to-leaf-numbers,Python,1699248384,Accepted,38.88 %,129,Sum Root to Leaf Numbers,2,97.50 %,1092551006.0
+Create Binary Tree From Descriptions,create-binary-tree-from-descriptions,Python,1699271617,Accepted,0 %,2306,Create Binary Tree From Descriptions,2,0 %,1092752871.0
+Recover Binary Search Tree,recover-binary-search-tree,Python,1699272231,Accepted,26.87 %,99,Recover Binary Search Tree,2,59.70 %,1092757789.0
+Binary Search Tree Iterator,binary-search-tree-iterator,Python,1699282388,Accepted,30.30 %,173,Binary Search Tree Iterator,2,95.90 %,1092857420.0
+Kth Smallest Element in a BST,kth-smallest-element-in-a-bst,Python,1699284028,Accepted,0 %,230,Kth Smallest Element in a BST,2,0 %,1092875495.0
+Find Minimum in Rotated Sorted Array,find-minimum-in-rotated-sorted-array,Python,1699284513,Accepted,88.99 %,153,Find Minimum in Rotated Sorted Array,2,70.43 %,1092881046.0
+Palindrome Partitioning,palindrome-partitioning,Python,1699285033,Accepted,69.53 %,131,Palindrome Partitioning,2,90.28 %,1092887190.0
+Sum of Square Numbers,sum-of-square-numbers,Python,1699286262,Accepted,29.85 %,633,Sum of Square Numbers,2,35.07 %,1092901577.0
+Best Time to Buy and Sell Stock II,best-time-to-buy-and-sell-stock-ii,Python,1699323106,Accepted,64.18 %,122,Best Time to Buy and Sell Stock II,2,7.47 %,1093247711.0
+Clone Graph,clone-graph,Python,1699324746,Accepted,0 %,133,Clone Graph,2,0 %,1093261068.0
+Surrounded Regions,surrounded-regions,Python,1699330206,Accepted,42.36 %,130,Surrounded Regions,2,91.82 %,1093309079.0
+Number of Islands,number-of-islands,Python,1699331782,Accepted,0 %,200,Number of Islands,2,0 %,1093324603.0
+K-diff Pairs in an Array,k-diff-pairs-in-an-array,Python,1699333495,Accepted,20.86 %,532,K-diff Pairs in an Array,2,66.87 %,1093342396.0
+Min Stack,min-stack,Python,1699350424,Accepted,14.22 %,155,Min Stack,2,52.46 %,1093506070.0
+Binary Tree Vertical Order Traversal,binary-tree-vertical-order-traversal,Python,1699362587,Accepted,77.00 %,314,Binary Tree Vertical Order Traversal,2,82.16 %,1093606513.0
+Minimum Remove to Make Valid Parentheses,minimum-remove-to-make-valid-parentheses,Python,1699363863,Accepted,60.03 %,1371,Minimum Remove to Make Valid Parentheses,2,41.11 %,1093618763.0
+Dot Product of Two Sparse Vectors,dot-product-of-two-sparse-vectors,Python,1699364652,Accepted,69.31 %,1713,Dot Product of Two Sparse Vectors,2,74.11 %,1093626562.0
+Buildings With an Ocean View,buildings-with-an-ocean-view,Python,1699364895,Accepted,67.18 %,1909,Buildings With an Ocean View,2,32.82 %,1093629092.0
+Lowest Common Ancestor of a Binary Tree III,lowest-common-ancestor-of-a-binary-tree-iii,Python,1699366080,Accepted,21.78 %,1790,Lowest Common Ancestor of a Binary Tree III,2,7.40 %,1093641385.0
+Kth Largest Element in an Array,kth-largest-element-in-an-array,Python,1699370333,Accepted,0 %,215,Kth Largest Element in an Array,2,0 %,1093688400.0
+Valid Word Abbreviation,valid-word-abbreviation,Python,1699373551,Accepted,88.81 %,408,Valid Word Abbreviation,1,31.79 %,1093724380.0
+Valid Palindrome II,valid-palindrome-ii,Python,1699375747,Accepted,36.42 %,680,Valid Palindrome II,1,57.32 %,1093750503.0
+Nested List Weight Sum,nested-list-weight-sum,Python,1699376386,Accepted,80.56 %,339,Nested List Weight Sum,2,73.89 %,1093758591.0
+Custom Sort String,custom-sort-string,Python,1699376966,Accepted,79.37 %,807,Custom Sort String,2,51.70 %,1093765720.0
+Range Sum of BST,range-sum-of-bst,Python,1699377474,Accepted,9.50 %,975,Range Sum of BST,1,53.32 %,1093772261.0
+Group Shifted Strings,group-shifted-strings,Python,1699378140,Accepted,12.33 %,249,Group Shifted Strings,2,84.67 %,1093781085.0
+Maximum Swap,maximum-swap,Python,1699379001,Accepted,41.99 %,670,Maximum Swap,2,92.95 %,1093792566.0
+Lowest Common Ancestor of Deepest Leaves,lowest-common-ancestor-of-deepest-leaves,Python,1699384633,Accepted,17.09 %,1218,Lowest Common Ancestor of Deepest Leaves,2,77.78 %,1093862297.0
+Logger Rate Limiter,logger-rate-limiter,Python,1699418102,Accepted,33.62 %,359,Logger Rate Limiter,1,87.07 %,1094138530.0
+Lowest Common Ancestor of a Binary Tree IV,lowest-common-ancestor-of-a-binary-tree-iv,Python,1699441228,Accepted,78.69 %,1816,Lowest Common Ancestor of a Binary Tree IV,2,63.93 %,1094365862.0
+Lowest Common Ancestor of a Binary Search Tree,lowest-common-ancestor-of-a-binary-search-tree,Python,1699441344,Accepted,36.62 %,235,Lowest Common Ancestor of a Binary Search Tree,2,67.48 %,1094366811.0
+Lowest Common Ancestor of a Binary Tree,lowest-common-ancestor-of-a-binary-tree,Python,1699441394,Accepted,31.38 %,236,Lowest Common Ancestor of a Binary Tree,2,37.36 %,1094367219.0
+Lowest Common Ancestor of a Binary Tree II,lowest-common-ancestor-of-a-binary-tree-ii,Python,1699442161,Accepted,37.63 %,1780,Lowest Common Ancestor of a Binary Tree II,2,76.34 %,1094373601.0
+The Earliest Moment When Everyone Become Friends,the-earliest-moment-when-everyone-become-friends,Python,1699458101,Accepted,27.08 %,1085,The Earliest Moment When Everyone Become Friends,2,61.46 %,1094521619.0
+Number of Provinces,number-of-provinces,Python,1699460102,Accepted,57.49 %,547,Number of Provinces,2,46.18 %,1094544217.0
+Number of Connected Components in an Undirected Graph,number-of-connected-components-in-an-undirected-graph,Python,1699460248,Accepted,10.66 %,323,Number of Connected Components in an Undirected Graph,2,46.68 %,1094545879.0
+Graph Valid Tree,graph-valid-tree,Python,1699461098,Accepted,0 %,261,Graph Valid Tree,2,0 %,1094555832.0
+Count the Number of Complete Components,count-the-number-of-complete-components,Python,1699462333,Accepted,0 %,2793,Count the Number of Complete Components,2,0 %,1094571268.0
+Delete Nodes And Return Forest,delete-nodes-and-return-forest,Python,1699505339,Accepted,11.25 %,1207,Delete Nodes And Return Forest,2,10.63 %,1094954325.0
+Number of Valid Clock Times,number-of-valid-clock-times,Python,1699588610,Accepted,96.74 %,2528,Number of Valid Clock Times,1,83.70 %,1095667110.0
+Largest Time for Given Digits,largest-time-for-given-digits,Python,1699598306,Accepted,0 %,986,Largest Time for Given Digits,2,0 %,1095749923.0
+Palindrome Number,palindrome-number,Python,1699598755,Accepted,49.41 %,9,Palindrome Number,1,48.68 %,1095753853.0
+Find Palindrome With Fixed Length,find-palindrome-with-fixed-length,Python,1699602341,Accepted,0 %,1375,Find Palindrome With Fixed Length,2,0 %,1095783833.0
+Find Leaves of Binary Tree,find-leaves-of-binary-tree,Python,1699603838,Accepted,91.24 %,366,Find Leaves of Binary Tree,2,85.40 %,1095794824.0
+Insufficient Nodes in Root to Leaf Paths,insufficient-nodes-in-root-to-leaf-paths,Python,1699608397,Accepted,0 %,1157,Insufficient Nodes in Root to Leaf Paths,2,0 %,1095827539.0
+Count Nodes Equal to Average of Subtree,count-nodes-equal-to-average-of-subtree,Python,1699608969,Accepted,57.10 %,2347,Count Nodes Equal to Average of Subtree,2,82.38 %,1095831670.0
+Maximum Average Subtree,maximum-average-subtree,Python,1699609728,Accepted,39.18 %,1091,Maximum Average Subtree,2,62.89 %,1095836962.0
+Count Nodes Equal to Sum of Descendants,count-nodes-equal-to-sum-of-descendants,Python,1699611000,Accepted,0 %,2126,Count Nodes Equal to Sum of Descendants,2,0 %,1095846143.0
+Most Frequent Subtree Sum,most-frequent-subtree-sum,Python,1699612212,Accepted,8.51 %,508,Most Frequent Subtree Sum,2,80.85 %,1095854575.0
+Minimum Area Rectangle,minimum-area-rectangle,Python,1699638167,Accepted,0 %,976,Minimum Area Rectangle,2,0 %,1096065862.0
+Minimum Replacements to Sort the Array,minimum-replacements-to-sort-the-array,Python,1699639576,Accepted,0 %,2450,Minimum Replacements to Sort the Array,3,0 %,1096081039.0
+Max Consecutive Ones,max-consecutive-ones,Python,1699640057,Accepted,47.94 %,485,Max Consecutive Ones,1,94.56 %,1096086138.0
+Max Consecutive Ones II,max-consecutive-ones-ii,Python,1699641533,Accepted,0 %,487,Max Consecutive Ones II,2,0 %,1096100965.0
+Toeplitz Matrix,toeplitz-matrix,Python,1699781020,Accepted,0 %,777,Toeplitz Matrix,1,0 %,1097160150.0
+Add Strings,add-strings,Python,1699802757,Accepted,0 %,415,Add Strings,1,0 %,1097299055.0
+K Closest Points to Origin,k-closest-points-to-origin,Python,1699807173,Accepted,56.18 %,1014,K Closest Points to Origin,2,94.94 %,1097331111.0
+Top K Frequent Elements,top-k-frequent-elements,Python,1699807456,Accepted,95.78 %,347,Top K Frequent Elements,2,97.02 %,1097333410.0
+Sort Characters By Frequency,sort-characters-by-frequency,Python,1699807748,Accepted,89.42 %,451,Sort Characters By Frequency,2,48.15 %,1097335795.0
+Divide Array in Sets of K Consecutive Numbers,divide-array-in-sets-of-k-consecutive-numbers,Python,1699808980,Accepted,0 %,1422,Divide Array in Sets of K Consecutive Numbers,2,0 %,1097346085.0
+Top K Frequent Words,top-k-frequent-words,Python,1699809435,Accepted,88.85 %,692,Top K Frequent Words,2,88.22 %,1097349930.0
+Sort Features by Popularity,sort-features-by-popularity,Python,1699810202,Accepted,0 %,1919,Sort Features by Popularity,2,0 %,1097356707.0
+Sender With Largest Word Count,sender-with-largest-word-count,Python,1699810709,Accepted,0 %,2378,Sender With Largest Word Count,2,0 %,1097361211.0
+Diameter of Binary Tree,diameter-of-binary-tree,Python,1699812626,Accepted,41.54 %,543,Diameter of Binary Tree,1,79.08 %,1097378336.0
+Valid Palindrome,valid-palindrome,Python,1699849478,Accepted,79.32 %,125,Valid Palindrome,1,15.31 %,1097633496.0
+Rank Transform of an Array,rank-transform-of-an-array,Python,1699850369,Accepted,17.78 %,1256,Rank Transform of an Array,1,6.67 %,1097640488.0
+Rotate String,rotate-string,Python,1699851046,Accepted,78.04 %,812,Rotate String,1,70.22 %,1097646134.0
+Unique Number of Occurrences,unique-number-of-occurrences,Python,1699851420,Accepted,54.32 %,1319,Unique Number of Occurrences,1,65.10 %,1097649225.0
+Pascal's Triangle,pascals-triangle,Python,1699852425,Accepted,16.53 %,118,Pascal's Triangle,1,50.96 %,1097657956.0
+Add Binary,add-binary,Python,1699859856,Accepted,27.09 %,67,Add Binary,1,67.21 %,1097727427.0
+Climbing Stairs,climbing-stairs,Python,1699860336,Accepted,98.51 %,70,Climbing Stairs,1,20.52 %,1097731700.0
+Diagonal Traverse II,diagonal-traverse-ii,Python,1699866823,Accepted,14.46 %,1539,Diagonal Traverse II,2,92.90 %,1097785787.0
+Moving Average from Data Stream,moving-average-from-data-stream,Python,1699882118,Accepted,24.64 %,346,Moving Average from Data Stream,1,97.10 %,1097908125.0
+Diagonal Traverse,diagonal-traverse,Python,1699882919,Accepted,12.69 %,498,Diagonal Traverse,2,66.87 %,1097915624.0
+Closest Binary Search Tree Value,closest-binary-search-tree-value,Python,1699894348,Accepted,88.93 %,270,Closest Binary Search Tree Value,1,89.25 %,1098033385.0
+Add Two Integers,add-two-integers,Python,1699894997,Accepted,0 %,2383,Add Two Integers,1,0 %,1098040609.0
+Increasing Order Search Tree,increasing-order-search-tree,Python,1699895284,Accepted,17.26 %,933,Increasing Order Search Tree,1,65.99 %,1098043888.0
+4Sum II,4sum-ii,Python,1700021210,Accepted,0 %,454,4Sum II,2,0 %,1099118503.0
+Single Number II,single-number-ii,Python,1700056309,Accepted,12.67 %,137,Single Number II,2,92.06 %,1099399612.0
+Single Number III,single-number-iii,Python,1700056724,Accepted,35.96 %,260,Single Number III,2,45.32 %,1099403251.0
+Is Graph Bipartite?,is-graph-bipartite,Python,1700058722,Accepted,32.47 %,801,Is Graph Bipartite?,2,53.68 %,1099421588.0
+Valid Parentheses,valid-parentheses,Python,1700067237,Accepted,0 %,20,Valid Parentheses,1,0 %,1099498463.0
+Check If Word Is Valid After Substitutions,check-if-word-is-valid-after-substitutions,Python,1700068148,Accepted,0 %,1045,Check If Word Is Valid After Substitutions,2,0 %,1099506657.0
+Detonate the Maximum Bombs,detonate-the-maximum-bombs,Python,1700109784,Accepted,79.08 %,2206,Detonate the Maximum Bombs,2,63.78 %,1099831524.0
+Max Area of Island,max-area-of-island,Python,1700111707,Accepted,26.83 %,695,Max Area of Island,2,95.30 %,1099849760.0
+Repeated DNA Sequences,repeated-dna-sequences,Python,1700125610,Accepted,0 %,187,Repeated DNA Sequences,2,0 %,1099973573.0
+Convert Binary Search Tree to Sorted Doubly Linked List,convert-binary-search-tree-to-sorted-doubly-linked-list,Python,1700146852,Accepted,35.36 %,758,Convert Binary Search Tree to Sorted Doubly Linked List,2,92.40 %,1100141985.0
+Merge Two Binary Trees,merge-two-binary-trees,Python,1700148038,Accepted,74.75 %,617,Merge Two Binary Trees,1,20.51 %,1100153190.0
+All Possible Full Binary Trees,all-possible-full-binary-trees,Python,1700149608,Accepted,95.28 %,930,All Possible Full Binary Trees,2,85.83 %,1100168690.0
+As Far from Land as Possible,as-far-from-land-as-possible,Python,1700150841,Accepted,0 %,1117,As Far from Land as Possible,2,0 %,1100181440.0
+Make Costs of Paths Equal in a Binary Tree,make-costs-of-paths-equal-in-a-binary-tree,Python,1700152245,Accepted,0 %,2780,Make Costs of Paths Equal in a Binary Tree,2,0 %,1100195810.0
+Squares of a Sorted Array,squares-of-a-sorted-array,Python,1700152287,Accepted,82.31 %,1019,Squares of a Sorted Array,1,36.00 %,1100196233.0
+Sort Transformed Array,sort-transformed-array,Python,1700152377,Accepted,0 %,360,Sort Transformed Array,2,0 %,1100197149.0
+Remove All Adjacent Duplicates In String,remove-all-adjacent-duplicates-in-string,Python,1700154871,Accepted,8.37 %,1128,Remove All Adjacent Duplicates In String,1,11.96 %,1100224192.0
+Can Place Flowers,can-place-flowers,Python,1700155719,Accepted,48.98 %,605,Can Place Flowers,1,72.32 %,1100233338.0
+Missing Ranges,missing-ranges,Python,1700156190,Accepted,0 %,163,Missing Ranges,1,0 %,1100238369.0
+Asteroid Collision,asteroid-collision,Python,1700156931,Accepted,8.95 %,735,Asteroid Collision,2,97.25 %,1100246363.0
+Palindrome Permutation,palindrome-permutation,Python,1700158320,Accepted,80.56 %,266,Palindrome Permutation,1,25.00 %,1100261443.0
+Kth Missing Positive Number,kth-missing-positive-number,Python,1700159077,Accepted,56.23 %,1646,Kth Missing Positive Number,1,19.17 %,1100269754.0
+Append K Integers With Minimal Sum,append-k-integers-with-minimal-sum,Python,1700159644,Accepted,0 %,2305,Append K Integers With Minimal Sum,2,0 %,1100275553.0
+Longest Increasing Subsequence,longest-increasing-subsequence,Python,1700196970,Accepted,0 %,300,Longest Increasing Subsequence,2,0 %,1100549409.0
+Increasing Triplet Subsequence,increasing-triplet-subsequence,Python,1700199576,Accepted,0 %,334,Increasing Triplet Subsequence,2,0 %,1100572626.0
+Maximum Length of Pair Chain,maximum-length-of-pair-chain,Python,1700201182,Accepted,0 %,646,Maximum Length of Pair Chain,2,0 %,1100587856.0
+Validate IP Address,validate-ip-address,Python,1700216127,Accepted,33.64 %,468,Validate IP Address,2,30.84 %,1100709967.0
+Concatenation of Array,concatenation-of-array,Python,1700237000,Accepted,0 %,2058,Concatenation of Array,1,0 %,1100878277.0
+Longest Common Prefix,longest-common-prefix,Python,1700237323,Accepted,28.55 %,14,Longest Common Prefix,1,46.88 %,1100881242.0
+Reverse Substrings Between Each Pair of Parentheses,reverse-substrings-between-each-pair-of-parentheses,Python,1700237960,Accepted,81.08 %,1298,Reverse Substrings Between Each Pair of Parentheses,2,91.22 %,1100887348.0
+Minimum Length of String After Deleting Similar Ends,minimum-length-of-string-after-deleting-similar-ends,Python,1700238637,Accepted,0 %,1850,Minimum Length of String After Deleting Similar Ends,2,0 %,1100893748.0
+Matrix Diagonal Sum,matrix-diagonal-sum,Python,1700238911,Accepted,71.34 %,1677,Matrix Diagonal Sum,1,27.40 %,1100896327.0
+Minimum Depth of Binary Tree,minimum-depth-of-binary-tree,Python,1700384783,Accepted,58.57 %,111,Minimum Depth of Binary Tree,1,55.24 %,1102002009.0
+Path Sum,path-sum,Python,1700385124,Accepted,65.22 %,112,Path Sum,1,43.12 %,1102003911.0
+Path Sum III,path-sum-iii,Python,1700385597,Accepted,52.77 %,437,Path Sum III,2,67.47 %,1102006397.0
+Longest Univalue Path,longest-univalue-path,Python,1700387239,Accepted,0 %,687,Longest Univalue Path,2,0 %,1102015776.0
+Count Univalue Subtrees,count-univalue-subtrees,Python,1700388841,Accepted,72.50 %,250,Count Univalue Subtrees,2,35.00 %,1102025146.0
+Binary Tree Maximum Path Sum,binary-tree-maximum-path-sum,Python,1700409420,Accepted,12.14 %,124,Binary Tree Maximum Path Sum,3,94.52 %,1102155799.0
+Path Sum IV,path-sum-iv,Python,1700413167,Accepted,65.94 %,666,Path Sum IV,2,20.29 %,1102186594.0
+Smallest Range I,smallest-range-i,Python,1700414512,Accepted,35.48 %,944,Smallest Range I,1,16.13 %,1102198607.0
+First Unique Character in a String,first-unique-character-in-a-string,Python,1700414802,Accepted,0 %,387,First Unique Character in a String,1,0 %,1102201311.0
+Verifying an Alien Dictionary,verifying-an-alien-dictionary,Python,1700415499,Accepted,64.18 %,990,Verifying an Alien Dictionary,1,88.06 %,1102207766.0
+House Robber,house-robber,Python,1700452543,Accepted,98.71 %,198,House Robber,2,24.06 %,1102457581.0
+House Robber II,house-robber-ii,Python,1700453308,Accepted,77.83 %,213,House Robber II,2,24.08 %,1102463131.0
+House Robber III,house-robber-iii,Python,1700455643,Accepted,75.76 %,337,House Robber III,2,78.03 %,1102481438.0
+Clone N-ary Tree,clone-n-ary-tree,Python,1700455981,Accepted,0 %,1634,Clone N-ary Tree,2,0 %,1102484133.0
+Paint Fence,paint-fence,Python,1700456798,Accepted,0 %,276,Paint Fence,2,0 %,1102490882.0
+Paint House,paint-house,Python,1700457486,Accepted,96.39 %,256,Paint House,2,34.94 %,1102496508.0
+Paint House II,paint-house-ii,Python,1700458420,Accepted,0 %,265,Paint House II,3,0 %,1102504161.0
+Product of Array Except Self,product-of-array-except-self,Python,1700459458,Accepted,70.67 %,238,Product of Array Except Self,2,85.70 %,1102512780.0
+Minimum Path Cost in a Grid,minimum-path-cost-in-a-grid,Python,1700463476,Accepted,0 %,1394,Minimum Path Cost in a Grid,2,0 %,1102547231.0
+Merge Two Sorted Lists,merge-two-sorted-lists,Python,1700467963,Accepted,74.63 %,21,Merge Two Sorted Lists,1,16.87 %,1102580928.0
+Koko Eating Bananas,koko-eating-bananas,Python,1700472719,Accepted,7.33 %,907,Koko Eating Bananas,2,19.12 %,1102616889.0
+Palindromic Substrings,palindromic-substrings,Python,1700484011,Accepted,31.68 %,647,Palindromic Substrings,2,60.14 %,1102699156.0
+Missing Element in Sorted Array,missing-element-in-sorted-array,Python,1700494441,Accepted,0 %,1059,Missing Element in Sorted Array,2,0 %,1102792342.0
+Number of Ways Where Square of Number Is Equal to Product of Two Numbers,number-of-ways-where-square-of-number-is-equal-to-product-of-two-numbers,Python,1700498123,Accepted,0 %,1699,Number of Ways Where Square of Number Is Equal to Product of Two Numbers,2,0 %,1102830696.0
+Island Perimeter,island-perimeter,Python,1700499967,Accepted,35.35 %,463,Island Perimeter,1,67.68 %,1102851604.0
+Word Break,word-break,Python,1700557871,Accepted,0 %,139,Word Break,2,0 %,1103334192.0
+Word Break II,word-break-ii,Python,1700564471,Accepted,7.67 %,140,Word Break II,3,48.08 %,1103389736.0
+Merge Strings Alternately,merge-strings-alternately,Python,1700568468,Accepted,75.83 %,1894,Merge Strings Alternately,1,46.79 %,1103420067.0
+Zigzag Iterator,zigzag-iterator,Python,1700568890,Accepted,97.22 %,281,Zigzag Iterator,2,47.22 %,1103423128.0
+Flatten 2D Vector,flatten-2d-vector,Python,1700569004,Accepted,19.35 %,251,Flatten 2D Vector,2,96.77 %,1103424021.0
+Strobogrammatic Number,strobogrammatic-number,Python,1700966787,Accepted,42.71 %,246,Strobogrammatic Number,1,53.12 %,1106464967.0
+Strobogrammatic Number II,strobogrammatic-number-ii,Python,1700967591,Accepted,0 %,247,Strobogrammatic Number II,2,0 %,1106477074.0
+Diameter of N-Ary Tree,diameter-of-n-ary-tree,Python,1700970792,Accepted,50.00 %,1665,Diameter of N-Ary Tree,2,63.16 %,1106519519.0
+Reachable Nodes With Restrictions,reachable-nodes-with-restrictions,Python,1701068564,Accepted,0 %,2445,Reachable Nodes With Restrictions,2,0 %,1107261490.0
+Make Array Zero by Subtracting Equal Amounts,make-array-zero-by-subtracting-equal-amounts,Python,1701097665,Accepted,66.79 %,2436,Make Array Zero by Subtracting Equal Amounts,1,26.20 %,1107494905.0
+Reorganize String,reorganize-string,Python,1701098561,Accepted,89.35 %,778,Reorganize String,2,34.22 %,1107503537.0
+Task Scheduler,task-scheduler,Python,1701101057,Accepted,84.18 %,621,Task Scheduler,2,76.37 %,1107528723.0
+Majority Element,majority-element,Python,1701103861,Accepted,62.46 %,169,Majority Element,1,45.57 %,1107558707.0
+Majority Element II,majority-element-ii,Python,1701103988,Accepted,31.89 %,229,Majority Element II,2,51.05 %,1107560155.0
+Longest Happy String,longest-happy-string,Python,1701104805,Accepted,38.33 %,1304,Longest Happy String,2,83.33 %,1107569079.0
+Construct K Palindrome Strings,construct-k-palindrome-strings,Python,1701105261,Accepted,0 %,1502,Construct K Palindrome Strings,2,0 %,1107574210.0
+Advantage Shuffle,advantage-shuffle,Python,1701105916,Accepted,0 %,901,Advantage Shuffle,2,0 %,1107581320.0
+Removing Minimum and Maximum From Array,removing-minimum-and-maximum-from-array,Python,1701106473,Accepted,0 %,2212,Removing Minimum and Maximum From Array,2,0 %,1107587715.0
+Minimum Deletions to Make Character Frequencies Unique,minimum-deletions-to-make-character-frequencies-unique,Python,1701107850,Accepted,94.12 %,1770,Minimum Deletions to Make Character Frequencies Unique,2,20.92 %,1107603628.0
+Minimum Deletions to Make Array Beautiful,minimum-deletions-to-make-array-beautiful,Python,1701108217,Accepted,0 %,1355,Minimum Deletions to Make Array Beautiful,2,0 %,1107607686.0
+Array of Doubled Pairs,array-of-doubled-pairs,Python,1701140532,Accepted,0 %,991,Array of Doubled Pairs,2,0 %,1107850738.0
+Find Original Array From Doubled Array,find-original-array-from-doubled-array,Python,1701141565,Accepted,0 %,2117,Find Original Array From Doubled Array,2,0 %,1107858558.0
+Minimum Operations to Make the Array Alternating,minimum-operations-to-make-the-array-alternating,Python,1701142992,Accepted,0 %,2289,Minimum Operations to Make the Array Alternating,2,0 %,1107869836.0
+Maximum Length of Subarray With Positive Product,maximum-length-of-subarray-with-positive-product,Python,1701169332,Accepted,0 %,1690,Maximum Length of Subarray With Positive Product,2,0 %,1108093877.0
+Largest Divisible Subset,largest-divisible-subset,Python,1701184783,Accepted,15.12 %,368,Largest Divisible Subset,2,25.58 %,1108227213.0
+Monotonic Array,monotonic-array,Python,1701186668,Accepted,40.45 %,932,Monotonic Array,1,70.74 %,1108246919.0
+Goat Latin,goat-latin,Python,1701187287,Accepted,75.00 %,851,Goat Latin,1,60.56 %,1108253320.0
+Shifting Letters,shifting-letters,Python,1701187778,Accepted,0 %,878,Shifting Letters,2,0 %,1108258779.0
+Reverse Words in a String II,reverse-words-in-a-string-ii,Python,1701190010,Accepted,44.79 %,186,Reverse Words in a String II,2,33.33 %,1108284202.0
+Lexicographically Smallest String After Substring Operation,lexicographically-smallest-string-after-substring-operation,Python,1701191109,Accepted,0 %,2828,Lexicographically Smallest String After Substring Operation,2,0 %,1108296854.0
+One Edit Distance,one-edit-distance,Python,1701193364,Accepted,11.02 %,161,One Edit Distance,2,34.65 %,1108323081.0
+Predict the Winner,predict-the-winner,Python,1701231105,Accepted,73.33 %,486,Predict the Winner,2,42.11 %,1108617652.0
+Merge Sorted Array,merge-sorted-array,Python,1701231785,Accepted,78.20 %,88,Merge Sorted Array,1,27.64 %,1108623600.0
+Can I Win,can-i-win,Python,1701238068,Accepted,0 %,464,Can I Win,2,0 %,1108680907.0
+Flip Game II,flip-game-ii,Python,1701240105,Accepted,0 %,294,Flip Game II,2,0 %,1108699960.0
+Guess Number Higher or Lower II,guess-number-higher-or-lower-ii,Python,1701251268,Accepted,0 %,375,Guess Number Higher or Lower II,2,0 %,1108790965.0
+Longest Absolute File Path,longest-absolute-file-path,Python,1701666831,Accepted,0 %,388,Longest Absolute File Path,2,0 %,1111929651.0
+Next Closest Time,next-closest-time,Python,1701744305,Accepted,26.19 %,681,Next Closest Time,2,38.10 %,1112575309.0
+Push Dominoes,push-dominoes,Python,1701749295,Accepted,0 %,868,Push Dominoes,2,0 %,1112615552.0
+Decode String,decode-string,Python,1701750861,Accepted,72.40 %,394,Decode String,2,37.81 %,1112629736.0
+Brace Expansion,brace-expansion,Python,1701751922,Accepted,0 %,1076,Brace Expansion,2,0 %,1112639568.0
+Letter Case Permutation,letter-case-permutation,Python,1701752297,Accepted,53.97 %,800,Letter Case Permutation,2,47.62 %,1112643219.0
+Score of Parentheses,score-of-parentheses,Python,1701754238,Accepted,0 %,886,Score of Parentheses,2,0 %,1112661803.0
+Closest Dessert Cost,closest-dessert-cost,Python,1701767149,Accepted,0 %,1900,Closest Dessert Cost,2,0 %,1112781231.0
+Minimum Domino Rotations For Equal Row,minimum-domino-rotations-for-equal-row,Python,1701794292,Accepted,0 %,1049,Minimum Domino Rotations For Equal Row,2,0 %,1113023813.0
+Fruit Into Baskets,fruit-into-baskets,Python,1701837548,Accepted,0 %,940,Fruit Into Baskets,2,0 %,1113358820.0
+Find And Replace in String,find-and-replace-in-string,Python,1701839700,Accepted,0 %,862,Find And Replace in String,2,0 %,1113377971.0
+Expressive Words,expressive-words,Python,1701843136,Accepted,0 %,827,Expressive Words,2,0 %,1113409523.0
+Step-By-Step Directions From a Binary Tree Node to Another,step-by-step-directions-from-a-binary-tree-node-to-another,Python,1702003096,Accepted,0 %,2217,Step-By-Step Directions From a Binary Tree Node to Another,2,0 %,1114767571.0
+Find Distance in a Binary Tree,find-distance-in-a-binary-tree,Python,1702004967,Accepted,0 %,1883,Find Distance in a Binary Tree,2,0 %,1114779474.0
+Water and Jug Problem,water-and-jug-problem,Python,1702008242,Accepted,78.57 %,365,Water and Jug Problem,2,84.29 %,1114802738.0
+Bomb Enemy,bomb-enemy,Python,1702032810,Accepted,0 %,361,Bomb Enemy,2,0 %,1115017693.0
+Bulls and Cows,bulls-and-cows,Python,1702270102,Accepted,83.72 %,299,Bulls and Cows,2,87.60 %,1116930438.0

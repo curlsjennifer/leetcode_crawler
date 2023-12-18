@@ -1,0 +1,16 @@
+class Solution(object):
+    def minimumDeletions(self, nums):
+        maxn, minn, ll = max(nums), min(nums), len(nums)
+        for start in range(len(nums)):
+            if nums[start] == maxn:break
+        for end in range(len(nums)):
+            if nums[end] == minn:break
+        fir = min(start, end)
+        sec = max(start, end)
+        ans = [sec+1, fir + 1 + ll-sec, ll-fir]
+        return min(ans)
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        

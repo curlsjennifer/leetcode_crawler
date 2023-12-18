@@ -1,0 +1,21 @@
+class Solution(object):
+    def findDiagonalOrder(self, nums):
+        res = []
+        lst = []
+        for I in range(len(nums)):
+            lst = [nums[I]] + lst
+            lst = [it for it in lst if len(it) > 0]
+            for J,it in enumerate(lst):
+                p = lst[J].pop(0)
+                res.append(p)
+        while len(lst) > 0:
+            lst = [it for it in lst if len(it) > 0]
+            for J, it in enumerate(lst):
+                p = lst[J].pop(0)
+                res.append(p)
+        return res
+        """
+        :type nums: List[List[int]]
+        :rtype: List[int]
+        """
+        

@@ -1,0 +1,19 @@
+import random
+class Solution(object):
+    def __init__(self, radius, x_center, y_center):
+        self.r = radius
+        self.x = x_center
+        self.y = y_center
+            def randPoint(self):
+        x0 = 1
+        y0 = 1
+        while x0*x0 + y0*y0 > 1:
+            x0 = random.uniform(-1, 1)
+            y0 = random.uniform(-1, 1)
+        return [self.x + self.r*x0, self.y + self.r*y0]
+        """
+        :rtype: List[float]
+        """
+        # Your Solution object will be instantiated and called as such:
+# obj = Solution(radius, x_center, y_center)
+# param_1 = obj.randPoint()

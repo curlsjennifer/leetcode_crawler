@@ -1,0 +1,8 @@
+class Solution(object):
+    def countNumbersWithUniqueDigits(self, n):
+        if n == 0:return 1
+        if n == 1:return 10
+        if n == 2:return 91
+        res = 9
+        for i in range(n-1):res = res*(9 - i)
+        return res + self.countNumbersWithUniqueDigits(n-1)

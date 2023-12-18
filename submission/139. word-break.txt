@@ -1,0 +1,19 @@
+class Solution(object):
+    def wordBreak(self, s, wordDict):
+        self.wd = wordDict
+        self.res = [-1]*len(s)
+        self.s, self.ll = s, len(s)
+        return self.wb(0)
+    def wb(self, idx):
+        if self.res[idx] != -1:return self.res[idx]
+        for it in self.wd:
+            if self.ll-idx >= len(it) and self.s[idx:idx+len(it)] == it:
+                if idx+len(it) == self.ll:
+                    self.res[idx] = True
+                    return True
+                elif self.wb(idx+len(it)) == True:
+                    self.res[idx] = True
+                    return True
+        self.res[idx] = False
+        return False
+        

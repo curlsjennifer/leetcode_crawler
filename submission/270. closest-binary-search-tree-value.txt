@@ -1,0 +1,23 @@
+# Definition for a binary tree node.
+# class TreeNode(object):
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution(object):
+    def closestValue(self, root, target):
+        self.dist = float("inf")
+        self.tar = target
+        self.val = root.val
+        self.cv(root)
+        return self.val
+    def cv(self, root):
+        if root == None:return
+        dis = (root.val - self.tar)
+        dis = dis*dis
+                if dis < self.dist:
+            self.dist, self.val = dis, root.val
+        elif dis == self.dist:
+            self.val = min(self.val, root.val)
+        if root.left != None and self.tar <= root.val:self.cv(root.left)
+        if root.right != None and root.val <= self.tar:self.cv(root.right)

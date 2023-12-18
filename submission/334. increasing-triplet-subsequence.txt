@@ -1,0 +1,13 @@
+class Solution(object):
+    def increasingTriplet(self, nums):
+        key = set(nums)
+        dirs = {}
+        for it in key:dirs[it] = 1
+        prev = set([nums[0]])
+        for i in range(1, len(nums)):
+            pp = [dirs[it] for it in prev if it < nums[i]]
+            if len(pp) > 0:
+                dirs[nums[i]] = max(dirs[nums[i]], max(pp)+1)
+                if dirs[nums[i]] >= 3:return True
+            prev = prev.union([nums[i]])
+        return False

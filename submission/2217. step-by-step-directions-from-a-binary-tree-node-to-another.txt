@@ -1,0 +1,25 @@
+class Solution(object):
+    def getDirections(self, root, startValue, destValue):
+        return self.gd(root, startValue, destValue, "L")[1]
+    def gd(self, root, st, ed, dic):
+      if root == None:return [-1, ""]
+      left = self.gd(root.left, st, ed, "L")
+      right = self.gd(root.right, st, ed, "R")
+      #print(root.val, left, right)
+      if root.val == st:
+        if left[0] == 2:return [3, left[1]]
+        if right[0] == 2:return [3, right[1]]
+        return [1, "U"]
+      if root.val == ed:
+        if left[0] == 1:return [3, left[1]]
+        if right[0] == 1:return [3, right[1]]
+        return [2, dic]
+      if left[0] == 3 or right[0] == 3:return left if left[0] == 3 else right
+      if left[0] > 0 and right[0] > 0:return [3, left[1]+right[1]] if left[0] == 1 
+          else [3, right[1]+left[1]]
+      if left[0] == 1 or right[0] == 1:return [1, left[1]+"U"] if left[0] == 1 else 
+          [1, right[1]+"U"]
+      if left[0] == 2 or right[0] == 2:
+        res = [2, dic + (left[1] if left[0] == 2 else right[1])]
+        return res
+      return [-1, ""]

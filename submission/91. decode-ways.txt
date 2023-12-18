@@ -1,0 +1,22 @@
+class Solution(object):
+    def numDecodings(self, s):
+        dirss = [["", 0], ["0", 0], ["10", 1], ["20", 1]]
+        dirs = {}
+        for it in dirss:dirs[it[0]] = it[1]
+        for i in range(1,10):dirs[str(i)] = 1
+        for i in range(10):dirs["0" + str(i)] = 0
+        for i in range(11,20):dirs[str(i)] = 2
+        for i in range(21,27):dirs[str(i)] = 2
+        for i in range(27,100):dirs[str(i)] = 1
+        for i in range(3,10):dirs[str(10*i)] = 0
+        self.dirs = dirs
+        return self.nd(s)
+    def nd(self, s):
+        try:
+            return self.dirs[s]
+        except:
+            s = s
+        res = self.nd(s[1:]) if s[0] != "0" else 0
+        res = res + self.nd(s[2:]) if (9<int(s[:2])<27) else res
+        self.dirs[s] = res
+        return res

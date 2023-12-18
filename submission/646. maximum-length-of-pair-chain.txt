@@ -1,0 +1,14 @@
+class Solution(object):
+    def findLongestChain(self, pairs):
+        pairs = sorted(pairs, key=lambda x:x[0])
+        if len(pairs) == 1:return 1
+        dirs = {}
+        for it in pairs:dirs[it[1]] = 1
+        prev = set([pairs[0][1]])
+        for i in range(1, len(pairs)):
+            maxl = [dirs[it] for it in prev if it < pairs[i][0]]
+            if len(maxl) > 0:
+                dirs[pairs[i][1]] = max(dirs[pairs[i][1]], max(maxl)+1)
+            prev = prev.union([pairs[i][1]])
+        return max([dirs[it] for it in prev])
+        

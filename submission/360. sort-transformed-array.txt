@@ -1,0 +1,3 @@
+class Solution(object):
+    def sortTransformedArray(self, nums, a, b, c):
+        return sorted([it*it*a+it*b+c for it in nums])

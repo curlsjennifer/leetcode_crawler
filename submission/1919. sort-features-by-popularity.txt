@@ -1,0 +1,6 @@
+class Solution(object):
+    def sortFeatures(self, features, responses):
+        resp = [set(it.split(" ")) for it in responses]
+        dirs = {}
+        for it in features:dirs[it] = sum([1 for st in resp if it in st])
+        return sorted(features, key=lambda x:dirs[x], reverse=True)

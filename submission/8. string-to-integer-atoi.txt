@@ -1,0 +1,15 @@
+class Solution(object):
+    def myAtoi(self, s):
+        INT_MAX = 2147483647
+        INT_MIN = -2147483648
+        s = s.strip()
+        if len(s) == 0:return 0
+        sign = 1
+        val = 0
+        if s[0] in ["-", "+"]:
+            sign = 1 if s[0] == "+" else -1
+            s = s[1:]
+        for char in s:
+            if not char.isdigit():break
+            val = val*10 + (ord(char) - ord("0"))
+        return min(INT_MAX, max(INT_MIN, val*sign))

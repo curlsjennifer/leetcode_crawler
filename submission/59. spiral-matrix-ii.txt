@@ -1,0 +1,16 @@
+class Solution(object):
+    def generateMatrix(self, n):
+        if n == 1:return [[1]]
+        if n == 2:return [[1,2], [4,3]]
+        if n == 3:return [[1,2,3], [8,9,4], [7,6,5]]
+        matrix = [[0 for i in range(n)] for j in range(n)]
+        idx = 1
+        for I in range(int(n/2)):
+            ix = [I for i in range(I, n-I)] + [i for i in range(I+1, n-I-1)] + [n-I-1 
+                for i in range(I, n-I)] + [n-1-i for i in range(I+1, n-I-1)]
+            iy = [i for i in range(I, n-I)] + [n-I-1 for i in range(I+1, n-I-1)] + [n
+                -i-1 for i in range(I, n-I)] + [I for i in range(I+1, n-I-1)]
+            for i in range(len(ix)):matrix[ix[i]][iy[i]] = idx + i
+            idx = idx + len(ix)
+                if mod(n,2) == 1:matrix[int(n/2)][int(n/2)] = n*n
+        return matrix

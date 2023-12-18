@@ -1,0 +1,17 @@
+# Definition for a binary tree node.
+# class TreeNode(object):
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution(object):
+    def rob(self, root):
+        return max(self.rr(root))
+             def rr(self, root):
+        if root == None:return [0, 0]
+        if root.left == None and root.right == None:return [root.val, 0]
+        left = self.rr(root.left)
+        right = self.rr(root.right)
+        resw = left[1] + right[1] + root.val
+        res2 = max(left) + max(right)
+        return [resw, res2]

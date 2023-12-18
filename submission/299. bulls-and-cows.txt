@@ -1,0 +1,16 @@
+class Solution(object):
+    def getHint(self, secret, guess):
+        A, sd, gd, ss, gg = 0, {}, {}, [it for it in secret], [it for it in guess]
+        for i in range(len(secret)):
+            if ss[i] == gg[i]:
+                A += 1
+                ss[i] = "@"
+                gg[i] = "@"
+        for i in range(10):sd[str(i)] = 0
+        for i in range(10):gd[str(i)] = 0
+        sd["@"] = 0
+        gd["@"] = 0
+        for it in ss:sd[it] += 1
+        for it in gg:gd[it] += 1
+        B = sum([min(sd[str(i)], gd[str(i)]) for i in range(10)])
+        return str(A) + "A" + str(B) + "B"

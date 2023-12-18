@@ -1,0 +1,18 @@
+class Solution(object):
+    def longestDiverseString(self, a, b, c):
+        order = sorted([["a", a], ["b", b], ["c", c]], key = lambda x:x[1])
+        seg = min(order[0][1]+order[1][1]+1, order[2][1])
+        order[2][1] = min(seg*2, order[2][1])
+        txt = [order[2][0]*2 if i < order[2][1]-seg else order[2][0] for i in range
+            (seg)]
+        txt2 = [order[1][0]]*order[1][1] + [order[0][0]]*order[0][1]
+        ll = min(len(txt), len(txt2))
+        for i in range(ll):
+            p = txt2.pop(0)
+            txt.insert(2*i+1, p)
+        while len(txt2) > 0:
+            ll = min(len(txt), len(txt2))
+            for i in range(ll):
+                p = txt2.pop(0)
+                txt.insert(2*i, p)
+        return "".join(txt)

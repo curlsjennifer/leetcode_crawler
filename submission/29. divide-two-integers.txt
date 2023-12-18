@@ -1,0 +1,23 @@
+class Solution(object):
+    def divide(self, dividend, divisor):
+        maxn = 2147483647
+        pn = (1 if dividend > 0 else -1) * (1 if divisor > 0 else -1)
+        dividend = dividend if dividend > 0 else -dividend
+        divisor = divisor if divisor > 0 else -divisor
+        if divisor == dividend:return pn
+        if divisor == 1:
+            if pn*dividend < -maxn-1:return -maxn-1
+            if pn*dividend > maxn:return maxn
+            return pn*dividend
+        rec = [divisor]
+        while rec[-1] < dividend:
+            rec.append(rec[-1]*2)
+                mul = [1]
+        res = 0
+        for i in range(len(rec)-1):mul.append(mul[-1]*2)
+        for i in range(len(rec)-1, -1 , -1):
+            if rec[i] <= dividend:
+                dividend -= rec[i]
+                res += mul[i]
+                print(i,dividend, rec[i], mul[i], res)
+        return res*pn

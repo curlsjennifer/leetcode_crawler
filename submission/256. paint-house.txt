@@ -1,0 +1,7 @@
+class Solution(object):
+    def minCost(self, costs):
+        if len(costs) == 1:return min(costs[0])
+        ccp = costs[0]
+        for i in range(1, len(costs)):ccp = [min(ccp[1],ccp[2])+costs[i][0], min
+            (ccp[0],ccp[2])+costs[i][1], min(ccp[0],ccp[1])+costs[i][2]]
+        return min(ccp)

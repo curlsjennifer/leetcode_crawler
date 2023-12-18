@@ -1,0 +1,17 @@
+class Solution(object):
+    def removeDuplicates(self, s):
+        idx = 0
+        s = [it for it in s]
+        while idx < len(s)-1:
+            if s[idx] == s[idx+1]:
+                s.pop(idx)
+                s.pop(idx)
+                idx = max(idx-1, 0)
+            else:
+                idx += 1
+        return "".join(s)
+        """
+        :type s: str
+        :rtype: str
+        """
+        

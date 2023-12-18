@@ -1,0 +1,23 @@
+class Solution(object):
+    def canIWin(self, maxChoosableInteger, desiredTotal):
+        self.ch = maxChoosableInteger
+        self.dirs = {}
+        if desiredTotal > self.ch*(self.ch+1)/2:return False
+        if desiredTotal == 0:return True
+        return self.cw(desiredTotal, self.ch*"0")
+    def cw(self, dt, curr):
+        lbl = curr + "_" + str(dt)
+        try:
+            return self.dirs[lbl]
+        except:
+            pass
+        if dt <= self.ch:
+            for i in range(dt-1, len(curr)):
+                if curr[i] == "0":return True
+        for i in range(min(dt-1, len(curr))):
+            if curr[i] == "0":
+                if self.cw(dt-1-i, curr[:i] + "1" + curr[i+1:]) == False:
+                    self.dirs[lbl] = True
+                    return True
+        self.dirs[lbl] = False
+        return False

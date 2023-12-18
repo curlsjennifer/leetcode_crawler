@@ -1,0 +1,10 @@
+class Solution(object):
+    def minPathCost(self, grid, moveCost):
+        if len(grid) == 1:return min(grid)
+        cost = grid[0]
+        ll = range(len(grid[0]))
+        for I in range(1, len(grid)):
+            cost = [min([cost[j]+moveCost[grid[I-1][j]][i] for j in ll]) + grid[I][i] 
+                for i in ll]
+        return min(cost)
+        

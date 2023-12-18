@@ -1,0 +1,18 @@
+class Solution(object):
+    def pathSum(self, nums):
+        dirs = {}
+        nums = [str(it) for it in nums]
+        for it in nums:dirs[it[:2]] = [int(it[2])]
+        for it in nums:dirs[it[:2]].extend([str(int(it[0])+1) + str(int(it[1])*2-1), 
+            str(int(it[0])+1) + str(int(it[1])*2)])
+        self.dirs = dirs
+        print(dirs)
+        return self.ps("11")[0]
+    def ps(self, root):
+        sum0 = []
+        print(self.dirs[root])
+        if self.dirs[root][1] in self.dirs:sum0.append(self.ps(self.dirs[root][1]))
+        if self.dirs[root][2] in self.dirs:sum0.append(self.ps(self.dirs[root][2]))
+        if len(sum0) == 0:return [self.dirs[root][0], 1]
+        nums = sum([it[1] for it in sum0])
+        return [self.dirs[root][0]*nums + sum([it[0] for it in sum0]), nums]

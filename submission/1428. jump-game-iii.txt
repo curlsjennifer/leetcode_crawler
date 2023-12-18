@@ -1,0 +1,21 @@
+class Solution(object):
+    def canReach(self, arr, start):
+        if arr[start] == 0:return True
+        reach = []
+        rea2 = [start]
+        zeros = [i for i in range(len(arr)) if arr[i] == 0]
+        if len(zeros) == 0:return False
+        while len(rea2) > 0:
+            rea3 = [i + arr[i] for i in rea2] + [i-arr[i] for i in rea2]
+            rea2 = list(set([it for it in rea3 if it not in reach]))
+            rea2 = [it for it in rea2 if 0<= it < len(arr)]
+            for zz in zeros:
+                if zz in rea2:return True
+            reach.extend(rea2)
+        return False
+        """
+        :type arr: List[int]
+        :type start: int
+        :rtype: bool
+        """
+        

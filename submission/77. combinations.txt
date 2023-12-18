@@ -1,0 +1,10 @@
+class Solution(object):
+    def combine(self, n, k):
+        if n == k:return [[i+1 for i in range(n)]]
+        if k == 1:return [[i+1] for i in range(n)]
+        rec = [[i+1] for i in range(n-k+1)]
+        for kk in range(1, k):
+            maxd = n-k+kk+2
+            rec = [[item + [j] for j in range(item[-1]+1, maxd)] for item in rec]
+            rec = [item for sublist in rec for item in sublist]
+        return rec

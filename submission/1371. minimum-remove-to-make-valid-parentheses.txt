@@ -1,0 +1,19 @@
+class Solution(object):
+    def minRemoveToMakeValid(self, s):
+        if len(s) <= 1:return s
+        left = []
+        s = [it for it in s]
+        for i in range(len(s)):
+            if s[i] == "(":left.append(i)
+            if s[i] == ")":
+                if len(left) == 0:
+                    s[i] = "!"
+                else:
+                    print(left[-1], s[left[-1]])
+                    s[left[-1]] = "#"
+                    s[i] = "/"
+                    left.pop(-1)
+        s = "".join(s).replace("(", "").replace("!", "").replace("#", "(").replace("
+            /", ")")
+        return s
+        

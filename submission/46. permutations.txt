@@ -1,0 +1,12 @@
+class Solution(object):
+    def permute(self, nums):
+        if len(nums) == 1:return [nums]
+        nums = sorted(nums)
+        l = [] 
+        for i in range(len(nums)):
+            m = nums[i]
+            remLst = nums[:i] + nums[i+1:]
+            #print(i, m, remLst, l, self.permute(remLst))
+            for p in self.permute(remLst):
+                l.append([m] + p)
+        return l

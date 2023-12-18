@@ -1,0 +1,10 @@
+class Solution(object):
+    def simplifyPath(self, path):
+        res = []
+        pl = [it for it in path.rstrip("/").split("/") if it not in ["", "."]]
+        for it in pl:
+            if (len(res) > 0) & (it == ".."):
+                res.pop()
+            if (it != ".."):res.append(it)
+        return "/" + "/".join(res)
+        

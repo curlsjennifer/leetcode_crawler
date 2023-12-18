@@ -1,0 +1,6 @@
+class Solution(object):
+    def subsets(self, nums):
+        if len(nums) == 1:return [[], nums]
+        res = [[], [nums[0]]]
+        for i in range(1, len(nums)):res = res + [it + [nums[i]] for it in res]
+        return res

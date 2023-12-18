@@ -1,0 +1,33 @@
+class Solution(object):
+    def validWordAbbreviation(self, word, abbr):
+        nums = [str(i) for i in range(10)]
+        numt = ""
+        idx = 0
+        for i, it in enumerate(abbr):
+            if idx >= len(word):return False
+            if abbr[i] not in nums and len(numt) == 0:
+                if abbr[i] != word[idx]:
+                    #print("CHK0", i, idx, abbr[i], word[idx])
+                    return False
+                else:
+                    #print("CHK1", i, idx, abbr[i], word[idx])
+                    idx += 1
+            elif abbr[i] not in nums and len(numt) != 0:
+                idx += int(numt)
+                #print("CHK2", i, idx, abbr[i], word[idx])
+                if idx >= len(word):return False
+                if abbr[i] != word[idx]:
+                    return False
+                else:
+                    idx += 1
+                numt = ""
+            elif abbr[i] in nums and len(numt) == 0:
+                #print("CHK3", i, idx, abbr[i], word[idx])
+                if abbr[i] == "0":return False
+                numt = abbr[i]
+            else:
+                #print("CHK4", i, idx, abbr[i], word[idx])
+                numt = numt + abbr[i]
+            if idx < len(word):print("RRR", i, idx, abbr[i], word[idx], numt)
+        if len(numt) > 0:idx += int(numt)
+        return True if idx == len(word) else False

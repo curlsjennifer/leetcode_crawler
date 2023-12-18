@@ -1,0 +1,14 @@
+class Solution(object):
+    def validTree(self, n, edges):
+        if n == 1:return True
+        dirs = {}
+        for i in range(n):dirs[i] = [i]
+        rec = [i for i in range(n)]
+        for ed in edges:
+            i, j = rec[ed[0]], rec[ed[1]]
+            info1 = dirs[i]
+            info2 = dirs[j]
+            if len([it for it in info1 if it in info2]) > 0:return False
+            for ii in info2:rec[ii] = rec[i]
+            dirs[i] = info1 + info2
+        return True if max(rec) == min(rec) else False

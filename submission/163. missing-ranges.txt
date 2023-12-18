@@ -1,0 +1,6 @@
+class Solution(object):
+    def findMissingRanges(self, nums, lower, upper):
+        res, nums = [], [lower-1] + nums + [upper+1]
+        for I in range(len(nums)-1):
+            if nums[I+1] - nums[I] > 1:res.append([nums[I]+1, nums[I+1]-1])
+        return res

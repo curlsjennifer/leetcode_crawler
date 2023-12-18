@@ -1,0 +1,27 @@
+class Solution(object):
+    def isToeplitzMatrix(self, matrix):
+        m, n = len(matrix), len(matrix[0])
+        mdim = min(m, n)
+        print(m,n)
+        if mdim == 1:return True
+        for p in range(-m, n):
+            tar = -1
+            for q in range(0, m):
+                if (0 <= q < m) & (0 <= p+q < n):
+                    #print(matrix[q][p+q])
+                    if tar >= 0:
+                        if matrix[q][p+q] != tar :return False
+                    else:
+                        #print("A")
+                        tar = matrix[q][p+q]
+        for p in range(n):
+            tar = matrix[0][p]
+            for q in range(1, m):
+                if p+q < n:
+                    if matrix[q][p+q] != tar :return False
+                return True
+        """
+        :type matrix: List[List[int]]
+        :rtype: bool
+        """
+        

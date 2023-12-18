@@ -1,0 +1,30 @@
+class Solution(object):
+    def findRepeatedDnaSequences(self, s):
+        print("LL", len(s))
+        self.s = s
+        txtl = ["A", "T", "C", "G"]
+        self.txtl = [it1+it2 for it1 in txtl for it2 in txtl]
+        dirs = {}
+        for it in self.txtl:dirs[it] = []
+        self.dirs = dirs
+        dirs0 = dirs
+        for i in range(len(s)-9):dirs0[s[i:i+2]].append(i+2)
+        res = self.fds(dirs0, 8)
+        return res
+    def fds(self, dirsp, count):
+        lent = 10-count
+        dirsn = []
+        if count == 0:
+            for grp in dirsp:
+                if len(dirsp[grp]) > 1:dirsn.append(grp)
+            return dirsn
+        for grp in dirsp:
+            if len(dirsp[grp]) < 2:continue
+            dirsi = {}
+            for it in self.txtl:dirsi[it] = []
+            for it in dirsp[grp]:
+                dirsi[self.s[it:it+2]].append(it+2)
+            rest = self.fds(dirsi, count-2)
+            rest = [grp + it for it in rest]
+            dirsn.extend(rest)
+        return dirsn

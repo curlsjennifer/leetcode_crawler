@@ -1,0 +1,19 @@
+class Solution(object):
+    def asteroidCollision(self, ast):
+        idx = 0
+        while idx < len(ast) -1:
+            if ast[idx] > 0 and ast[idx+1] < 0:
+                if abs(ast[idx]) > abs(ast[idx+1]):
+                    ast.pop(idx+1)
+                elif abs(ast[idx]) == abs(ast[idx+1]):
+                    ast.pop(idx)
+                    ast.pop(idx)
+                    idx = max(0, idx-1)
+                else:
+                    ast.pop(idx)
+                    idx = max(0, idx-1)
+            else:
+                idx += 1
+            #print(ast)
+        return ast
+        

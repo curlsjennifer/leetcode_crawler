@@ -1,0 +1,22 @@
+class Solution(object):
+    def getMaxLen(self, nums):
+        nums = [1 if it > 0 else it for it in nums]
+        nums = [-1 if it < 0 else it for it in nums]
+        nl, pl, ll = 0, 0, 0
+        for i in range(len(nums)):
+            if nums[i] == 0:
+                nl, pl = 0, 0
+            elif nums[i] == 1:
+                pl += 1
+                nl = nl + 1 if nl > 0 else 0
+            else:
+                ppl, nnl = pl, nl
+                nl = ppl + 1
+                pl = nnl + 1 if nnl > 0 else 0
+            ll = max(ll, pl)
+        return ll
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        

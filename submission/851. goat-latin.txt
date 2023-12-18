@@ -1,0 +1,5 @@
+class Solution(object):
+    def toGoatLatin(self, sentence):
+        return " ".join([it + "maa" +"a"*i if it[0] in ['a', 'e', 'i', 'o', 'u', "A", 
+            "E", "I", "O", "U"] else it[1:] + it[0] + "maa" +"a"*i for i, it in 
+            enumerate(sentence.split(" "))])

@@ -1,0 +1,28 @@
+class Solution(object):
+    def combinationSum2(self, candidates, target):
+        ucd = sorted(list(set(candidates)))
+        rec = {}
+        for it in ucd:rec[it] = 0
+        for it in candidates:rec[it] += 1
+        self.cd = [[it, rec[it]] for it in ucd]
+        return self.dfs(target, len(self.cd)-1)
+    def dfs(self, tt, idx):
+        cand = self.cd[idx][0]
+        num = self.cd[idx][1]
+        if idx == 0:
+            return [[cand for ii in range(int(tt/cand))]] if (mod(tt, cand) == 0) & 
+                (int(tt/cand) <= num) else []
+        i = 0
+        rec = []
+        while (tt > i*cand) & (i <= num):
+            rec.extend([[cand for ii in range(i)] + it for it in self.dfs(tt-i*cand, 
+                idx-1)])
+            i += 1
+        if (tt == i*cand) & (i <= num):rec.append([cand for ii in range(i)])
+        return rec
+        """
+        :type candidates: List[int]
+        :type target: int
+        :rtype: List[List[int]]
+        """
+        

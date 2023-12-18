@@ -1,0 +1,15 @@
+class Solution(object):
+    def search(self, nums, target):
+        #print(nums)
+        if len(nums) == 0:return False
+        if (len(nums) == 1) & (target == nums[0]):return True
+        if len(nums) == 1:return False
+        if (len(nums) == 2) & (target in nums):return True
+        if len(nums) == 2:return False
+        if nums[0] < nums[-1]:
+            if nums[0] > target:return False
+            if nums[-1] < target:return False
+        mid = int(len(nums)/2)
+        if self.search(nums[0:mid], target):return True
+        if self.search(nums[mid:], target):return True
+        return False

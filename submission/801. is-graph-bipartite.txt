@@ -1,0 +1,21 @@
+class Solution(object):
+    def isBipartite(self, graph):
+        node = range(len(graph))
+        self.dirs = graph
+        self.res = [0]*len(node)
+        while 0 in self.res:
+            seed = [i for i,it in enumerate(self.res) if it == 0]
+            if len(seed) == 0:break
+            ans = self.mark(seed[0], 1)
+            if ans == False:return False
+        return True
+    def mark(self, idx, lbl):
+        self.res[idx] = lbl
+        nexti = self.dirs[idx]
+        for ii in nexti:
+            if self.res[ii] == lbl:
+                return False
+            elif self.res[ii] == 0:
+                ans = self.mark(ii, -lbl)
+                if ans == False:return False
+        return True

@@ -1,0 +1,12 @@
+class Solution(object):
+    def kthPalindrome(self, queries, intLength):
+        self.ll = int((intLength+1)/2)
+        self.pow10 = 1
+        self.odd = mod(intLength+1, 2)
+        for i in range(self.ll-1):self.pow10 = self.pow10*10
+        return [self.num(ii) for ii in queries]
+            def num(self, item):
+        if item > 9*self.pow10:return -1
+        item = str(item + self.pow10-1)
+        item2 = item[::-1]
+        return int(item + item2) if self.odd == 1 else int(item + item2[1:])

@@ -1,0 +1,9 @@
+class Solution(object):
+    def nextClosestTime(self, time):
+        nums = sorted(set([it for it in time if it != ":"]))
+        lst = [it for it in nums]
+        for i in range(3):lst = [it1+it2 for it1 in lst for it2 in nums]
+        lst = [it[:2]+":"+it[2:] for it in lst if int(it[:2]) < 24 and int(it[2:]) < 
+            60]
+        idx = [i for i, it in enumerate(lst) if it == time][0]
+        return lst[idx+1] if idx < len(lst)-1 else lst[0]

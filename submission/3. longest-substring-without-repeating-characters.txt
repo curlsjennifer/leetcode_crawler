@@ -1,0 +1,31 @@
+class Solution(object):
+    def lengthOfLongestSubstring(self, s):
+        self.dirs = {}
+        return self.subs(s)
+    def subs(self, s):
+        print(s)
+        if len(s) == 1:return 1
+        try:
+            return self.dirs[s]
+        except:
+            res = 1
+        rec = []
+        start = 0
+        chk = 0
+        end = len(s)-1
+        for i in range(len(s)):
+            if s[i] not in rec:
+                rec.append(s[i])
+            else:
+                res = max(res, self.subs(s[start:i]))
+                start = start + 1
+                chk = 1
+        if (start > 0) & (start < len(s) - 1):res = max(res, self.subs(s[start:]))
+        if chk == 0:
+            #print("un", s)
+            self.dirs[s] = len(s)
+            return len(s)
+        else:
+            self.dirs[s] = res
+            return res
+                        

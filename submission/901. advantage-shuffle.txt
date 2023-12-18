@@ -1,0 +1,9 @@
+class Solution(object):
+    def advantageCount(self, nums1, nums2):
+        idx1 = sorted(range(len(nums1)), key=lambda x:nums1[x], reverse=True)
+        idx2 = sorted(range(len(nums2)), key=lambda x:nums2[x], reverse=True)
+        nn = [0]*len(nums1)
+        for ii in range(len(nums2)):
+            p = idx1.pop(0 if nums1[idx1[0]] > nums2[idx2[ii]] else -1)
+            nn[idx2[ii]] = nums1[p]
+        return nn

@@ -1,0 +1,16 @@
+class Solution(object):
+    def closestCost(self, bc, tc, target):
+        for IT in tc:
+            bc = [it1 + IT*ii for ii in range(3) for it1 in bc]
+            bcl = [it for it in bc if it > target]
+            bc = [it for it in bc if it <= target]
+            if len(bcl) > 0:bc += [min(bcl)]
+            bc = set(bc)
+        diff, res = float("inf"), 0
+        for it in bc:
+            d2 = (it-target)*(it-target)
+            if d2 < diff:
+                diff, res = d2, it
+            elif d2 == diff:
+                res = min(res, it)
+        return res

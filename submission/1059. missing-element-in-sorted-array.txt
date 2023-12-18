@@ -1,0 +1,10 @@
+class Solution(object):
+    def missingElement(self, nums, k):
+        nums = nums + [nums[-1]+10*k]
+        for i in range(len(nums)-1):
+            diff = nums[i+1]-nums[i]-1
+            if k > diff:
+                k = k-diff
+            else:
+                return nums[i] + k
+                

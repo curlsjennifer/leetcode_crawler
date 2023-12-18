@@ -1,0 +1,19 @@
+class Solution(object):
+    def mySqrt(self, x):
+        if x == 0:return 0
+        if x <= 3:return 1
+        if x <= 8:return 2
+        x0 = x
+        x1 = int(x/2)
+        while x0 != x1:
+            tmp = int(x1 - (x1*x1 - x)/(x1 + x0))
+            x0 = x1
+            x1 = tmp
+                    for i in range(10):
+            if (x1+5-i)*(x1+5-i) <= x:return x1+5-i
+        return x1
+        """
+         = :type x: int - x
+        :rtype: int
+        """
+        

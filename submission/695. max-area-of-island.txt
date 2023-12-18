@@ -1,0 +1,30 @@
+class Solution(object):
+    def maxAreaOfIsland(self, grid):
+        self.grid = grid
+        self.ll = [len(grid), len(grid[0])]
+        self.find = 0
+        pos = self.seed()
+        dirc = [[-1, 0], [1, 0], [0, -1], [0, 1]]
+        res = 0
+        while pos:
+            queue = [pos]
+            area = 1
+            while len(queue) > 0:
+                pp = queue.pop(0)
+                nei = [[pp[0]+it[0], pp[1]+it[1]] for it in dirc]
+                nei = [p for p in nei if 0<=p[0]<self.ll[0] and 0<=p[1]<self.ll[1] 
+                    and self.grid[p[0]][p[1]] == 1]
+                for p in nei:self.grid[p[0]][p[1]] = -1
+                area += len(nei)
+                queue.extend(nei)
+            res = max(res, area)
+            pos = self.seed()
+        return res
+    def seed(self):
+        for i in range(self.find, self.ll[0]):
+            for j in range(self.ll[1]):
+                if self.grid[i][j] == 1:
+                    self.grid[i][j] = -1
+                    self.find = i
+                    return [i,j]
+        return False

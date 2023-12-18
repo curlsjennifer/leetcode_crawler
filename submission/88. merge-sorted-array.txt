@@ -1,0 +1,17 @@
+class Solution(object):
+    def merge(self, nums1, m, nums2, n):
+        id1, id2, idx = m-1, n-1, 0
+        for idx in range(m+n-1, -1, -1):
+            if id1 > -1 and id2 > -1:
+                if nums1[id1] >= nums2[id2]:
+                    nums1[idx] = nums1[id1]
+                    id1 -= 1
+                else:
+                    nums1[idx] = nums2[id2]
+                    id2 -= 1
+            elif id1 > -1:
+                nums1[idx] = nums1[id1]
+                id1 -= 1
+            elif id2 > -1:
+                nums1[idx] = nums2[id2]
+                id2 -= 1

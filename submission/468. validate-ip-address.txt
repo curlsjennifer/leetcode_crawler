@@ -1,0 +1,33 @@
+class Solution(object):
+    def validIPAddress(self, queryIP):
+        nump = queryIP.count(".")
+        numpp = queryIP.count(":")
+        if nump == 3 and numpp == 0:
+            allow = [str(i) for i in range(10)] + ["."]
+            if len([it for it in queryIP if it in allow]) != len(queryIP):
+                return "Neither"
+            txt = queryIP.split(".")
+            ltxt = [len(it) for it in txt]
+            if len(txt) != 4 or min(ltxt) == 0 or max(ltxt) > 3:
+                return "Neither"
+            if len([it for it in txt if len(it) > 1 and it[0] == "0"]) > 0:
+                return "Neither"
+            if max([int(it) for it in txt]) > 255:return "Neither"
+            return "IPv4"
+        elif nump == 0 and numpp == 7:
+            allow = [str(i) for i in range(10)] + [":"] + [chr(97+i) for i in range(6
+                )] + [chr(65+i) for i in range(6)]
+            if len([it for it in queryIP if it in allow]) != len(queryIP):
+                return "Neither"
+            txt = queryIP.split(":")
+            ltxt = [len(it) for it in txt]
+            if len(txt) != 8 or min(ltxt) == 0 or max(ltxt) > 4:
+                return "Neither"
+            return "IPv6"
+        else:
+            return "Neither"
+        """
+        :type queryIP: str
+        :rtype: str
+        """
+        

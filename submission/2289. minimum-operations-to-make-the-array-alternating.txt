@@ -1,0 +1,24 @@
+class Solution(object):
+    def minimumOperations(self, nums):
+        if len(nums) == 1:return 0
+        if len(nums) == 2:return 1 if nums[0] == nums[1] else 0
+        if len(nums) == 3:return 0 if nums[0] == nums[2] and nums[0] != nums[1] else 
+            1
+        lst1 = [it for i, it in enumerate(nums) if i%2 == 0]
+        lst2 = [it for i, it in enumerate(nums) if i%2 == 1]
+        key1, key2, di1, di2 = set(lst1), set(lst2), {}, {}
+        for it in key1:di1[it] = 0
+        for it in key2:di2[it] = 0
+        for it in lst1:di1[it] += 1
+        for it in lst2:di2[it] += 1
+        max1 = max([di1[i] for i in key1])
+        max2 = max([di2[i] for i in key2]) 
+        mk1 = [it for it in key1 if di1[it] == max1]
+        mk2 = [it for it in key2 if di2[it] == max2]
+        if len(mk1) == 1 and len(mk2) == 1 and mk1 == mk2:
+            key1.remove(mk1[0])
+            key2.remove(mk2[0])
+            mmax1 = max([di1[i] for i in key1]+[0])
+            mmax2 = max([di2[i] for i in key2]+[0]) 
+            return len(nums) - max(mmax1+max2, mmax2+max1)
+        return len(nums) - max1 - max2

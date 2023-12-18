@@ -1,0 +1,21 @@
+# Definition for a binary tree node.
+# class TreeNode(object):
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution(object):
+    def equalToDescendants(self, root):
+        self.res = 0
+        self.etd(root)
+        return self.res
+    def etd(self, root):
+        if root == None:return 0
+        sum0 = self.etd(root.left) + self.etd(root.right)
+        if sum0 == root.val:self.res += 1
+        return sum0 + root.val
+        """
+        :type root: Optional[TreeNode]
+        :rtype: int
+        """
+        

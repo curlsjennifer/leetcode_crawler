@@ -1,0 +1,11 @@
+class Solution(object):
+    def searchMatrix(self, matrix, target):
+        focus = []
+        for i in range(len(matrix)):
+            if (matrix[i][0] <= target) & (matrix[i][-1] >= target):focus.append(i)
+            if matrix[i][0] > target:break
+        if len(focus) == 0:return False
+        for ti in focus:
+            for j in range(len(matrix[0])):
+                if matrix[ti][j] == target:return True
+        return False

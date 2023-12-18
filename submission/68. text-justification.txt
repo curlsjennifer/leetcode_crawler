@@ -1,0 +1,29 @@
+class Solution(object):
+    def fullJustify(self, words, maxWidth):
+        ww, rec, num = [], [], 0
+        for i in range(len(words)):
+            nextn = num + len(words[i]) + (0 if num == 0 else 1) 
+            if nextn <= maxWidth:
+                rec.append(words[i])
+                num = nextn
+            else:
+                if len(rec) == 1:
+                    ww0 = rec[0] + " " * (maxWidth - len(rec[0]))
+                else:
+                    alltxt = maxWidth - sum([len(it) for it in rec])
+                    minsp = int(alltxt/(len(rec)-1))
+                    minsp = [minsp for j in range(len(rec)-1)]
+                    for j in range(mod(alltxt, len(rec)-1)):minsp[j] += 1
+                    ww0 = rec[0] + "".join([" "*minsp[j] + rec[j+1] for j in range
+                        (len(minsp))])
+                ww.append(ww0)
+                print(ww0)
+                rec, num = [words[i]], len(words[i])
+                    if len(rec) == 1:
+            ww0 = rec[0] + " " * (maxWidth - len(rec[0]))
+        else:
+            ww0 = " ".join(rec)
+            ww0 = ww0 + " " * (maxWidth - len(ww0))
+        ww.append(ww0)
+        return ww
+ 

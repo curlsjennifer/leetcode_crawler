@@ -1,0 +1,4 @@
+class Solution(object):
+    def canPlaceFlowers(self, flowerbed, n):
+        return True if n <= sum([int((len(it)+1)/2)-1 for it in "".join(["0"] + [str(i
+            ) for i in flowerbed] + ["0"]).split("1") if len(it) > 2]) else False

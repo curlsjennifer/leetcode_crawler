@@ -1,0 +1,18 @@
+class Solution(object):
+    def minDeletions(self, s):
+        dirs, dirn, key = {}, {}, set(s)
+        for it in key:dirs[it] = 0
+        for it in s:dirs[it] += 1
+        for it in key:dirn[dirs[it]] = []
+        for it in key:dirn[dirs[it]].append(it)
+        setn = sorted([it for it in dirn], reverse=True)
+        ss = set(setn)
+        res = 0
+        for nn in setn:
+            if len(dirn[nn]) > 1:
+                nextn = [i for i in range(nn-1, 0, -1) if i not in ss]
+                selected = nextn[:min(len(dirn[nn])-1, len(nextn))]
+                res += (len(dirn[nn]) - 1)*nn - sum(selected)
+                ss = ss.union(set(selected))
+        return res
+        

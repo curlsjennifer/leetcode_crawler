@@ -1,0 +1,9 @@
+class Solution(object):
+    def canConstruct(self, s, k):
+        dirs, key = {}, set(s)
+        if k > len(s):return False
+        for it in key:dirs[it] = 0
+        for it in s:dirs[it] += 1
+        print(dirs)
+        single = len([it for it in key if mod(dirs[it],2) == 1])
+        return True if k >= single else False

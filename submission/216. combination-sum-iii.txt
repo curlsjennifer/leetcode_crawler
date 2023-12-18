@@ -1,0 +1,10 @@
+class Solution(object):
+    def combinationSum3(self, k, n):
+        return self.dfs(n,k,9)
+    def dfs(self, tt, n, idx):
+        if (n == 1) & (idx == tt):return [[idx]]
+        if idx == 1:return []
+                nextl = [it + [idx] for it in self.dfs(tt-idx, n-1, idx-1)] if tt-idx > 0 
+            else []
+        nextl.extend([it for it in self.dfs(tt, n, idx-1)])
+        return nextl

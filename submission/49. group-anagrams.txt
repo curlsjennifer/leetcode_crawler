@@ -1,0 +1,7 @@
+class Solution(object):
+    from itertools import groupby
+    def groupAnagrams(self, strs):
+        test_list = strs
+        temp = lambda test_list: sorted(test_list)
+        res = [list(val) for key, val in groupby(sorted(test_list, key = temp), temp)]
+        return res

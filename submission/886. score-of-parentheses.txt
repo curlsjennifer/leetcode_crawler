@@ -1,0 +1,31 @@
+class Solution(object):
+    def scoreOfParentheses(self, s):
+        s = [it for it in s]
+        idxl, idx = [], 0
+        while idx < len(s):
+            if s[idx] == "(":
+                idxl.append(idx)
+                idx += 1
+            elif s[idx] == ")":
+                ll = idxl.pop()
+                if ll == idx-1:
+                    s.pop(ll)
+                    s[ll] = 1
+                else:
+                    s[idx] = s[idx-1]*2
+                    s.pop(ll)
+                    s.pop(ll)
+                idx = ll
+            else:
+                if idx > 0 and s[idx-1] != "(":
+                    s[idx] = s[idx-1]+s[idx]
+                    s.pop(idx-1)
+                    idx -= 1
+                else:
+                    idx += 1
+        return s[0]
+        """
+        :type s: str
+        :rtype: int
+        """
+        

@@ -1,0 +1,14 @@
+class Solution(object):
+    def expand(self, s):
+        idx = [i for i, it in enumerate(s) if it == "{" or it == "}"]+ [len(s)]
+        if len(idx) == 0:return [s]
+        res = [s[:idx[0]]]
+        for I in range(len(idx)-1):
+            if s[idx[I]] == "{":
+                next0 = sorted(s[idx[I]+1:idx[I+1]].split(","))
+                res = [it1+it2 for it1 in res for it2 in next0]
+            else:
+                next0 = s[idx[I]+1:idx[I+1]]
+                res = [it1+next0 for it1 in res]
+        return res
+        

@@ -1,0 +1,20 @@
+# Definition for a binary tree node.
+# class TreeNode(object):
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution(object):
+    def findLeaves(self, root):
+        self.res = []
+        self.fl(root)
+        dirs = {}
+        res = max([it[0] for it in self.res])
+        for i in range(res+1):dirs[i] = []
+        for it in self.res:dirs[it[0]].append(it[1])
+        return [dirs[i] for i in range(res+1)]
+    def fl(self,root):
+        if root == None:return -1
+        res = max(self.fl(root.left), self.fl(root.right))+1
+        self.res.append([res, root.val])
+        return res

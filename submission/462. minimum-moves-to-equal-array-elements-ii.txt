@@ -1,0 +1,10 @@
+import numpy as np
+class Solution(object):
+    def minMoves2(self, nums):
+        mnums = np.median(nums)
+        return int(sum([np.abs(it-mnums) for it in nums]))
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        

@@ -1,0 +1,15 @@
+class Solution(object):
+    def canWin(self, currentState):
+        self.dirs = {}
+        return self.cw(currentState)
+    def cw(self, cs):
+        if cs in self.dirs:return self.dirs[cs]
+        if len(cs) < 2:return False
+        for i in range(len(cs)-1):
+            if cs[i] == "+" and cs[i+1] == "+":
+                if self.cw(cs[:i] + "--" + cs[i+2:]) == False:
+                    self.dirs[cs] = True
+                    print("TTT", cs, i)
+                    return True
+        self.dirs[cs] = False
+        return False

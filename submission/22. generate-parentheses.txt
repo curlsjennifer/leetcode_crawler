@@ -1,0 +1,7 @@
+class Solution(object):
+    def generateParenthesis(self, n):
+        res = [["(", 1, 0]]
+        for i in range(1, 2*n):res = [[it[0] + "(",  it[1] + 1, it[2]] for it in res 
+            if it[1] + 1 <= n] + [[it[0] + ")",  it[1], it[2] + 1] for it in res if 
+            it[1] > it[2]]
+        return [it[0] for it in res]

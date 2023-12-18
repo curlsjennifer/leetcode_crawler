@@ -1,0 +1,11 @@
+class Solution(object):
+    def countTime(self, time):
+        num1 = [time[0]] if time[0] != "?" else [str(i) for i in range(3)]
+        num2 = [it+time[1] for it in num1] if time[1] != "?" else [it+str(i) for it 
+            in num1 for i in range(10)]
+        num2 = [it for it in num2 if int(it) < 24]
+        num3 = [time[3]] if time[3] != "?" else [str(i) for i in range(6)]
+        num4 = [it + time[4] for it in num3] if time [4] != "?" else [it +str(i) for 
+            it in num3 for i in range(10)]
+                return len(num2) * len(num4)
+        

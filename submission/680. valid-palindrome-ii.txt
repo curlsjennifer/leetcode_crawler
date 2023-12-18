@@ -1,0 +1,31 @@
+class Solution(object):
+    def validPalindrome(self, s):
+        try:
+            self.chk = self.chk*0
+        except:
+            self.chk = 1
+        if len(s) == 1:return True
+        if len(s) == 2:return True
+        id1, id2 = 0, len(s)-1
+        while id2 > id1:
+            #print(id1, id2, s[id1], s[id2])
+            if s[id1] == s[id2]:
+                id1, id2 = id1+1, id2-1
+            else:
+                #print(id1, id2, s[id1], s[id2], self.chk)
+                if self.chk == 1:
+                    self.chk = 0
+                    #print("RRR", id1, id2, s[id1], s[id2], self.chk)
+                    if s[id1] == s[id2-1]:
+                        rec = self.validPalindrome(s[id1:id2])
+                        #print(rec, s[id1:id2])
+                        if rec == True:return rec
+                    if s[id1+1] == s[id2]:
+                        return self.validPalindrome(s[id1+1:id2+1])
+                    else:
+                        return False
+                else:
+                    return False
+        if id1 == id2:return True
+        if s[id1] == s[id2]:return True
+        return False

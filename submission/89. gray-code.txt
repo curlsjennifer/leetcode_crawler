@@ -1,0 +1,7 @@
+class Solution(object):
+    def grayCode(self, n):
+        if n == 1:return [0, 1]
+        if n == 2:return [0, 1, 3, 2]
+        tmpl = self.grayCode(n - 1)
+        ll = len(tmpl)
+        return tmpl + [ll + tmpl[i] for i in range(ll-1, -1, -1)]

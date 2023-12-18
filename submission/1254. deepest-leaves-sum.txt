@@ -1,0 +1,15 @@
+# Definition for a binary tree node.
+# class TreeNode(object):
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution(object):
+    def deepestLeavesSum(self, root):
+        lists = [root]
+        res = root.val
+        while len(lists) > 0:
+            lists = [it.left for it in lists] + [it.right for it in lists]
+            lists = [it for it in lists if it != None]
+            if len(lists) > 0 :res = sum([it.val for it in lists])
+        return res

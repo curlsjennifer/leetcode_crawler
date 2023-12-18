@@ -1,0 +1,14 @@
+class Solution(object):
+    def maximumSwap(self, num):
+        numt = [it for it in str(num)]
+        if len(numt) == 1:return num
+        if len(numt) == 2:return num if int(numt[0]) > int(numt[1]) else int(numt[1] 
+            + numt[0])
+        for i in range(len(numt)-1):
+            maxn = max([int(numt[j]) for j in range(i, len(numt))])
+            if maxn > int(numt[i]):
+                idx = [j for j in range(i, len(numt)) if int(numt[j]) == maxn][-1]
+                numt[idx] = numt[i]
+                numt[i] = str(maxn)
+                return int("".join(numt))
+        return num

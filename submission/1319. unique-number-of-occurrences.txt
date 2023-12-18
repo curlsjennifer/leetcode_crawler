@@ -1,0 +1,11 @@
+class Solution(object):
+    def uniqueOccurrences(self, arr):
+        dirs, dirs2 = {}, {}
+        for it in arr:dirs[it] = 0
+        for it in arr:dirs[it] += 1
+        for it in dirs:dirs2[dirs[it]] = 0
+        for it in dirs:dirs2[dirs[it]] += 1
+        for it in dirs2:
+            if dirs2[it] > 1:return False
+        return True
+        

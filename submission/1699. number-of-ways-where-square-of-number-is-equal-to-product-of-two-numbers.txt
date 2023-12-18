@@ -1,0 +1,32 @@
+class Solution(object):
+    def numTriplets(self, nums1, nums2):
+        dir1, dir2, res1, res2 = {}, {}, {}, {}
+        key1 = set(nums1)
+        key2 = set(nums2)
+        for it in key1:dir1[it] = 0
+        for it in key2:dir2[it] = 0
+        for it in nums1:dir1[it] += 1
+        for it in nums2:dir2[it] += 1
+        res = 0
+        print(dir1, dir2)
+        for nn1 in key1:
+            basic = nn1*nn1
+            for nn2 in key2:
+                if mod(basic, nn2) == 0:
+                    if basic == nn2*nn2:
+                        res = res + dir1[nn1]*(dir2[nn2]-1)*dir2[nn2]/2 if dir2[nn2]
+                            >1 else res
+                    elif basic/nn2 in key2:
+                        res = res + dir1[nn1]*(dir2[nn2])*(dir2[basic/nn2]) if nn2 > 
+                            basic/nn2 else res
+        for nn2 in key2:
+            basic = nn2*nn2
+            for nn1 in key1:
+                if mod(basic, nn1) == 0:
+                    if basic == nn1*nn1:
+                        res = res + dir2[nn2]*(dir1[nn1]-1)*dir1[nn1]/2 if dir1[nn1]
+                            >1 else res
+                    elif basic/nn1 in key1:
+                        res = res + dir2[nn2]*(dir1[nn1])*(dir1[basic/nn1]) if nn1 > 
+                            basic/nn1 else res
+        return res

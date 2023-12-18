@@ -1,0 +1,21 @@
+class Solution(object):
+    def wordBreak(self, s, wordDict):
+        self.wd = wordDict
+        self.dirs = {}
+        self.res = [-1]*len(s)
+        for it in range(len(s)):self.dirs[it] = []
+                self.s, self.ll = s, len(s)
+        return self.wb(0)
+    def wb(self, idx):
+        rec = []
+        if self.res[idx] != -1:return self.dirs[idx]
+        self.res[idx] = 1
+        for it in self.wd:
+            if self.ll-idx >= len(it) and self.s[idx:idx+len(it)] == it:
+                if idx+len(it) == self.ll:
+                    rec.append(it)
+                else:
+                    nexts = self.wb(idx+len(it))
+                    rec.extend([it + " " + ii for ii in nexts])
+        self.dirs[idx] = rec
+        return rec

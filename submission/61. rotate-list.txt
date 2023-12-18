@@ -1,0 +1,21 @@
+# Definition for singly-linked list.
+class ListNode(object):
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+class Solution(object):
+    def rotateRight(self, head, k):
+        h = []
+        while head != None:
+            h.append(head.val)
+            head = head.next
+                if len(h) == 0:return None
+        k = mod(k, len(h))
+        h = [h[i] for i in range(len(h)-k, len(h))] + [h[i] for i in range(0, len(h
+            )-k)]
+        res = ListNode(val=h[-1])
+        print(h)
+        if len(h) == 1:return res
+        for i in range(len(h)-2, -1, -1):res = ListNode(val=h[i], next = res)
+        return res
+                

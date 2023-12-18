@@ -1,0 +1,9 @@
+class MovingAverage(object):
+    def __init__(self, size):
+        self.size = size
+        self.rec = []
+    def next(self, val):
+        self.rec.append(val)
+        if len(self.rec) > self.size:self.rec.pop(0)
+        return sum(self.rec) * 1.0 /len(self.rec)
+ 

@@ -1,0 +1,6 @@
+class Solution(object):
+    def canMeasureWater(self, jc1, jc2, tc):
+      if tc > jc1+jc2:return False
+      return True if tc%self.gcd(jc1, jc2) == 0 else False
+    def gcd(self, p, q):
+      return self.gcd(q, p%q) if p%q != 0 else q

@@ -1,0 +1,8 @@
+class Solution(object):
+    def convert(self, s, numRows):
+        if numRows == 1:return s
+        rep, ls = 2*numRows-2, len(s)
+        idx = [mod(i, rep) for i in range(ls)]
+        idx = [min(idx[i], rep-idx[i]) for i in range(ls)]
+        s2 = sorted([[i, s[i], idx[i]] for i in range(ls)], key=lambda x:ls*x[2]+x[0])
+        return "".join([x[1] for x in s2])

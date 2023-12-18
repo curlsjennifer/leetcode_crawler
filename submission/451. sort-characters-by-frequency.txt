@@ -1,0 +1,12 @@
+class Solution(object):
+    def frequencySort(self, s):
+        key0, dirs = set(s), {}
+        for it in key0:dirs[it] = 0
+        for it in s:dirs[it] += 1
+        key0 = sorted(key0, key = lambda x:dirs[x], reverse=True)
+        return "".join([it*dirs[it] for it in key0])
+        """
+        :type s: str
+        :rtype: str
+        """
+        

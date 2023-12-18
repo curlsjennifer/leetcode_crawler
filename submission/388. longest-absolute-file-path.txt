@@ -1,0 +1,21 @@
+class Solution(object):
+    def lengthLongestPath(self, input):
+        inputs = [[it.count("\t"), len(it.split("\t")[-1]), 1 if "." in it else 0] 
+            for it in input.split("\n")]
+        return self.lp(inputs)
+    def lp(self, lst):
+        if len(lst) == 0:return -1
+        if len(lst) == 1:return lst[0][1] if lst[0][2] == 1 else 0
+        res,subset, rr = 0, [], 0
+        for i in range(len(lst)):
+            if lst[i][0] == 0:
+                res0 = self.lp(subset)
+                if res0 > 0:res = max(res, rr + 1 + res0)
+                subset = []
+                if lst[i][2] == 1:res = max(res, lst[i][1])
+                rr = 0 if lst[i][2] == 1 else lst[i][1]
+            else:
+                subset.append([lst[i][0]-1, lst[i][1], lst[i][2]])
+        res0 = self.lp(subset)
+        if res0 > 0:res = max(res, rr + 1 + self.lp(subset))
+        return res

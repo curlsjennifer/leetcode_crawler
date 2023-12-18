@@ -1,0 +1,24 @@
+class Solution(object):
+    def findPairs(self, nums, k):
+        if k == 0:
+            dirs = {}
+            for i in nums:dirs[i] = 0
+            for i in nums:dirs[i] += 1
+            return len([it for it in set(nums) if dirs[it] >= 2])
+        if len(nums) == 1:return 0
+        if len(nums) == 2:return 1 if max(nums) - min(nums) == k else 0
+        nums = sorted(list(set(nums)))
+        idx, res, last = 1, 0, len(nums)-1
+        for i in range(last):
+            sums = nums[i] + k
+            if idx == last:
+                res = res + 1 if nums[idx] == sums else res
+                break
+            for ii in range(idx, last+1):
+                if nums[ii] == sums:
+                    res, idx = res+1, ii
+                elif nums[ii] > sums:
+                    break
+                else:
+                    idx = ii
+        return res

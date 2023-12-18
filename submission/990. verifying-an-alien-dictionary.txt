@@ -1,0 +1,12 @@
+class Solution(object):
+    def isAlienSorted(self, words, order):
+        if len(words) == 1:return True
+        dirs = {"0":0}
+        words = [it + "0" for it in words]
+        for i, it in enumerate(order):dirs[it] = i+1
+        for I in range(len(words)-1):
+            for j in range(min(len(words[I]), len(words[I+1]))):
+                if dirs[words[I][j]] > dirs[words[I+1][j]]:return False
+                if dirs[words[I][j]] < dirs[words[I+1][j]]:break
+                        return True
+        

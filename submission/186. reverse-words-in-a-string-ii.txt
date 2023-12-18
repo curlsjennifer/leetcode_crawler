@@ -1,0 +1,18 @@
+class Solution(object):
+    def reverseWords(self, s):
+        ll = len(s)
+        for i in range(ll/2):
+            s[i], s[ll-i-1] = s[ll-i-1], s[i]
+        start, idx = 0, 0
+        while idx < ll:
+            while idx < ll and s[idx] != " ":idx += 1
+            if idx >= ll:break
+            for j in range(start, (idx+start)/2):
+                diff = (idx+start)
+                s[j], s[diff-j-1] = s[diff-j-1], s[j]
+            start = idx + 1
+            idx += 1
+        if s[-1] != " ":
+            for j in range(start, (ll+start)/2):
+                diff = (ll+start)
+                s[j], s[diff-j-1] = s[diff-j-1], s[j]

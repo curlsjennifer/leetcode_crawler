@@ -1,0 +1,19 @@
+class Solution(object):
+    def combinationSum(self, candidates, target):
+        self.cd = candidates
+        self.rec = {}
+        return self.dfs(target, len(self.cd)-1)
+    def dfs(self, tt, idx):
+        cand = self.cd[idx]
+        if idx == 0:
+            return [[cand for i in range(int(tt/cand))]] if mod(tt, cand) == 0 else 
+                []
+        i = 0
+        rec = []
+        while (tt > i*cand):
+            rec.extend([[cand for ii in range(i)] + it for it in self.dfs(tt-i*cand, 
+                idx-1)])
+            i += 1
+        if tt == i*cand:rec.append([cand for ii in range(i)])
+        return rec
+        

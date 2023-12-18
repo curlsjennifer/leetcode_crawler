@@ -1,0 +1,17 @@
+class Solution(object):
+    def isPossibleDivide(self, nums, k):
+        if k == 1:return True
+        key0, dirs = sorted(set(nums)), {}
+        for it in key0:dirs[it] = 0
+        for it in nums:dirs[it] += 1
+        for i in range(len(key0)-k+1):
+            if dirs[key0[i]] > 0:
+                minus = dirs[key0[i]]
+                try:
+                    for j in range(k):dirs[key0[i]+j] -= minus
+                except:
+                    return False
+            if dirs[it] < 0:
+                return False
+                rest = [dirs[it] for it in key0[len(key0)-k+1:]]
+        return True if max(rest) == 0 and min(rest) == 0 else False

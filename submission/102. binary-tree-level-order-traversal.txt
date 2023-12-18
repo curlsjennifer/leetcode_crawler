@@ -1,0 +1,17 @@
+# Definition for a binary tree node.
+class TreeNode(object):
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+class Solution(object):
+    def levelOrder(self, root):
+        if root == None:return []
+        rec = [root]
+        res = []
+        while len(rec) > 0:
+            res0 = [it.val for it in rec]
+            res.append(res0)
+            rec = [item for sublist in rec for item in [sublist.left, sublist.right]]
+            rec = [it for it in rec if it != None]
+        return res

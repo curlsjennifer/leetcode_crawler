@@ -1,0 +1,14 @@
+class ZigzagIterator(object):
+    def __init__(self, v1, v2):
+        res = []
+        for i in range(max(len(v1), len(v2))):
+            if i < len(v1):res.append(v1[i])
+            if i < len(v2):res.append(v2[i])
+        self.res = res
+    def next(self):
+        return self.res.pop(0)
+    def hasNext(self):
+        return True if len(self.res) > 0 else False
+        # Your ZigzagIterator object will be instantiated and called as such:
+# i, v = ZigzagIterator(v1, v2), []
+# while i.hasNext(): v.append(i.next())

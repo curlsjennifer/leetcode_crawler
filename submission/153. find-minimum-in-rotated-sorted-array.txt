@@ -1,0 +1,4 @@
+class Solution(object):
+    def findMin(self, nums):
+        i = [i for i in range(1, len(nums)) if nums[i] < nums[i-1]]
+        return nums[i[0]] if len(i) > 0 else nums[0]

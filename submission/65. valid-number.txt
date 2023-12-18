@@ -1,0 +1,39 @@
+class Solution(object):
+    def isNumber(self, s):
+        s = s.encode('ascii','ignore').lower()
+        nums = [str(i) for i in range(10)] + ["+", "-", ".", "e"]
+        S = [txt for txt in s]
+                if not set(S).issubset(nums) or S.count("e") > 1 or S.count(".") > 1 or set(S
+            ).issubset(["+", "-", ".", "e"]):
+            return False
+                if "e" in S:
+            S1 = [txt for txt in s.split("e")[0]]
+            S2 = [txt for txt in s.split("e")[1]]
+            if len(S1) < 1 or len(S2) < 1:
+                return False
+                        if self.isfloat(s.split("e")[0]):
+                res1 = True
+            else:
+                res1 = False
+                            s2 = s.split("e")[1]
+            s2 = s2[1:] if s2[0] == "+" else s2
+            s2 = s2[1:] if len(s2) > 0 and s2[0] == "-" else s2
+                        if s2.isdigit():
+                res2 = True
+            else:
+                res2 = False
+                        if res1 and res2:
+                return True
+            else:
+                return False
+        else:
+            return self.isfloat(s)
+        def isfloat(self, s):
+        if s == ".":
+            return False
+        s = s.split(".")[0] + "0." + s.split(".")[1] if "." in s else s
+        try:
+            float(s)
+            return True
+        except ValueError:
+            return False

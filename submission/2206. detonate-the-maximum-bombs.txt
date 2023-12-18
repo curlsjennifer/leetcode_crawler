@@ -1,0 +1,22 @@
+class Solution(object):
+    def maximumDetonation(self, bombs):
+        N = len(bombs)
+        nxt = [[] for _ in range(N)]
+        for i in range(N-1):
+            for j in range(i+1, N):
+                dis = pow(bombs[i][0]-bombs[j][0], 2) + pow(bombs[i][1]-bombs[j][1], 
+                    2)
+                if dis <= pow(bombs[i][2],2):nxt[i].append(j)
+                if dis <= pow(bombs[j][2],2):nxt[j].append(i)
+                result = 0
+        for start in range(N):
+            queue = [start]
+            visited = [0] * N
+            visited[start] = 1
+            while queue:
+                for bomb in nxt[queue.pop(0)]:
+                    if visited[bomb]:continue
+                    queue.append(bomb)
+                    visited[bomb] = 1
+            result = max(result, sum(visited))
+        return result

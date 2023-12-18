@@ -1,0 +1,15 @@
+class Solution(object):
+    def minDeletion(self, nums):
+        idx, ll = 0, len(nums)
+        while idx < len(nums)-1:
+            if nums[idx] == nums[idx+1]:
+                nums.pop(idx)
+            else:
+                idx += 2
+        if mod(len(nums), 2) == 1:nums.pop()
+        return ll-len(nums)
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        

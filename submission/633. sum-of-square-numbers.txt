@@ -1,0 +1,12 @@
+class Solution(object):
+    def judgeSquareSum(self, c):
+        if c == 0:return True
+        for i in range(int(sqrt(c))+1):
+            rest = int(sqrt(c-i*i))
+            if c-i*i-rest*rest == 0:return True
+        return False
+        """
+        :type c: int
+        :rtype: bool
+        """
+        

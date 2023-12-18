@@ -1,0 +1,14 @@
+class Solution(object):
+    def countComponents(self, n, edges):
+        if n == 1:return 1
+        dirs = {}
+        for i in range(n):dirs[i] = [i]
+        rec = [i for i in range(n)]
+        for item in edges:
+            i,j = item[0], item[1]
+            if rec[i] != rec[j]:
+                info1 = dirs[rec[i]]
+                info2 = dirs[rec[j]]
+                for ii in info2:rec[ii] = rec[i]
+                dirs[rec[i]] = info1 + info2
+        return len(set(rec))

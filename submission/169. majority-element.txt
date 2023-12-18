@@ -1,0 +1,13 @@
+class Solution(object):
+    def majorityElement(self, nums):
+        dirs, key = {}, set(nums)
+        for it in key:dirs[it] = 0
+        for it in nums:dirs[it] += 1
+        ll = int((len(nums)+1)/2)
+        for it in key:
+            if dirs[it] >= ll:return it
+                """
+        :type nums: List[int]
+        :rtype: int
+        """
+        

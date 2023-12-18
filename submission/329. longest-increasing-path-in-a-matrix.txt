@@ -1,0 +1,27 @@
+class Solution(object):
+    def longestIncreasingPath(self, matrix):
+        n = len(matrix[0])
+        m = len(matrix)
+        rm = [[-1 for j in range(n)] for i in range(m)]
+        rec = {}
+        key = sorted(list(set([item for sublist in matrix for item in sublist])))
+        for item in key:rec[item] = []
+        for i in range(m):
+            for j in range(n):rec[matrix[i][j]].append([i,j])
+        if len(key) == 1:return 1
+        #print(rec)
+        start_gp = rec[key[-1]]
+        for i in range(len(start_gp)):rm[start_gp[i][0]][start_gp[i][1]] = 1
+        for I in range(len(key)-2, -1, -1):
+            ans = []
+            for i in range(len(rec[key[I]])):
+                x = rec[key[I]][i][0]
+                y = rec[key[I]][i][1]
+                idx = [[max(x-1,0), y], [min(x+1,m-1), y], [x, max(y-1,0)], [x, min(y
+                    +1,n-1)]]
+                ans.append([x,y,max([rm[idx[j][0]][idx[j][1]] for j in range(4)] + 
+                    [0]) + 1])
+            for i in range(len(ans)):
+                rm[ans[i][0]][ans[i][1]] = ans[i][2]
+            #print(rm)
+        return max([max(it) for it in rm])

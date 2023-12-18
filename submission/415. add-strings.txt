@@ -1,0 +1,17 @@
+class Solution(object):
+    def addStrings(self, num1, num2):
+        if len(num2) > len(num1):num1, num2 = num2, num1
+        rest, rec, id2 = 0, [], len(num2)
+        num1, num2 = num1[::-1], num2[::-1]
+        for i in range(len(num2)):
+            rest = rest + int(num1[i]) + int(num2[i])
+            rec.append(mod(rest, 10))
+            rest = int(rest/10)
+        if rest == 0:
+            return num1[id2:][::-1] + "".join([str(it) for it in rec[::-1]])
+                while rest > 0 and id2 < len(num1):
+            rest = rest + int(num1[id2])
+            rec.append(mod(rest, 10))
+            rest, id2 = int(rest/10), id2+1
+        return num1[id2:][::-1] + (str(rest) if rest > 0 else "") + "".join([str(it) 
+            for it in rec[::-1]])

@@ -1,0 +1,8 @@
+class Solution(object):
+    def firstUniqChar(self, s):
+        dirs, sets = {}, set([it for it in s])
+        for it in sets:dirs[it] = 0
+        for i in range(len(s)):dirs[s[i]] += 1
+        for i in range(len(s)):
+            if dirs[s[i]] == 1:return i 
+        return -1

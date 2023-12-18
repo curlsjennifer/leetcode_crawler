@@ -1,0 +1,22 @@
+class Solution(object):
+    def maximalRectangle(self, matrix):
+        n = len(matrix)
+        m = len(matrix[0])
+        hi = [[0 for i in range(m)]for j in range(n)]
+        for j in range(m):
+            res = 0
+            for i in range(n):
+                res = 0 if matrix[i][j] == "0" else res + 1
+                hi[i][j] = res
+        res = 0
+        H = 2*(m+n)
+        for j in range(m):
+            for i in range(n):
+                if hi[i][j] > 0:
+                    hii = H
+                    for jj in range(j,m):
+                        hii = min(hii, hi[i][jj])
+                        res = max(res, (jj - j + 1) * hii)
+                        #print(i,j,jj, matrix[i][j], hi[i][j], hii, res)
+        return res
+        print(hi)

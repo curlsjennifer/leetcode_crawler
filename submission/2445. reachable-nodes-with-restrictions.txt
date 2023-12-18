@@ -1,0 +1,11 @@
+class Solution(object):
+    def reachableNodes(self, n, edges, restricted):
+        self.dirs = {}
+        for it in range(n):self.dirs[it] = []
+        for it in edges:self.dirs[it[0]].append(it[1])
+        for it in edges:self.dirs[it[1]].append(it[0])
+        for it in restricted:self.dirs[it] = -1
+        return self.rn(0, -1)
+    def rn(self, node, nodep):
+        if self.dirs[node] == -1:return 0
+        return sum([self.rn(it, node) for it in self.dirs[node] if it != nodep]) + 1

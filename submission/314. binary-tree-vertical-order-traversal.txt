@@ -1,0 +1,27 @@
+# Definition for a binary tree node.
+# class TreeNode(object):
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution(object):
+    def verticalOrder(self, root):
+        lists = self.vt(root, 0, 0)
+        res = []
+        for it in lists:
+            rr = sorted(it, key = lambda x:x[2])
+            res.append([it[1] for it in rr])
+        return res
+        def vt(self, root, seed, h):
+        if root == None:return []
+        if root.left == None and root.right == None:return [[[seed, root.val, h]]]
+        left = self.vt(root.left, seed-1, h+1)
+        right = self.vt(root.right, seed+1, h+1)
+        left = left if left != None else []
+        right = right if right != None else []
+        lista = [[[seed, root.val, h]]] + left + right
+        layer = sorted(list(set([it[0][0] for it in lista])))
+        dirs = {}
+        for it in layer:dirs[it] = []
+        for it in lista:dirs[it[0][0]].extend(it)
+        return [dirs[it] for it in layer]

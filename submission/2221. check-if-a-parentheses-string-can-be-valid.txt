@@ -1,0 +1,26 @@
+class Solution(object):
+    def canBeValid(self, s, locked):
+        if mod(len(s), 2) == 1:return False
+        if (s[0] == ")") & (locked[0] == "1"):return False
+        sign = ["0" if locked[i] == "0" else s[i] for i in range(len(locked))]
+        upper, lower, zero = (1 if sign[0] == "(" else 0), 0, (1 if sign[0] == "0" 
+            else 0)
+        for i in range(1, len(s)):
+            upper = upper + (1 if sign[i] == "(" else 0)
+            lower = lower + (1 if sign[i] == ")" else 0)
+            zero = zero + (1 if sign[i] == "0" else 0)
+            #print(i, upper, lower, zero)
+            if lower - upper > zero:return False
+        s = "".join([s[i] for i in range(len(s)-1, -1, -1)])
+        s = s.replace("(", "A").replace(")", "(").replace("A", ")")
+        locked = "".join([locked[i] for i in range(len(s)-1, -1, -1)])
+        if (s[0] == ")") & (locked[0] == "1"):return False
+        sign = ["0" if locked[i] == "0" else s[i] for i in range(len(locked))]
+        upper, lower, zero = (1 if sign[0] == "(" else 0), 0, (1 if sign[0] == "0" 
+            else 0)
+        for i in range(1, len(s)):
+            upper = upper + (1 if sign[i] == "(" else 0)
+            lower = lower + (1 if sign[i] == ")" else 0)
+            zero = zero + (1 if sign[i] == "0" else 0)
+            if lower - upper > zero:return False
+        return True

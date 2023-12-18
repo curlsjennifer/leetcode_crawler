@@ -1,0 +1,18 @@
+import random
+class Solution(object):
+    def __init__(self, nums):
+        self.nums = nums
+        self.idx = range(len(nums))
+            def reset(self):
+        self.nums = [it[0] for it in sorted(zip(self.nums, self.idx), key = lambda x
+            :x[1])]
+        self.idx = range(len(self.nums))
+        return self.nums
+    def shuffle(self):
+        random.shuffle(self.idx)
+        self.nums = [self.nums[self.idx[i]] for i in range(len(self.nums))]
+        return self.nums
+# Your Solution object will be instantiated and called as such:
+# obj = Solution(nums)
+# param_1 = obj.reset()
+# param_2 = obj.shuffle()

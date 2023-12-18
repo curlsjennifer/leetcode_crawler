@@ -1,0 +1,17 @@
+class Solution(object):
+    def addBinary(self, a, b):
+        if len(b) > len(a):a, b = b, a
+        a = a[::-1]
+        b = b[::-1]
+        rest = 0
+        rec = []
+        for i in range(len(b)):
+            rest = rest + int(a[i]) + int(b[i])
+            rec.append(str(mod(rest, 2)))
+            rest = int(rest/2)
+        for i in range(len(b), len(a)):
+            rest = rest + int(a[i])
+            rec.append(str(mod(rest, 2)))
+            rest = int(rest/2)
+        if rest > 0:rec.append(str(rest))
+        return "".join(rec)[::-1]

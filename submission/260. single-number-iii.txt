@@ -1,0 +1,7 @@
+class Solution(object):
+    def singleNumber(self, nums):
+        res = []
+        for it in nums:
+            if nums.count(it) == 1:
+                res.append(it)
+                if len(res) == 2:return res

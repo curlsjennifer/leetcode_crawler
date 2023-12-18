@@ -1,0 +1,20 @@
+class Solution(object):
+    def calculate(self, s):
+        si = ["+", "-", "*", "/"]
+        for i in si:s = s.replace(i, " " + i + " ")
+        s = [it for it in s.split(" ") if len(it) > 0]
+        i = 0
+        while i < len(s) - 1:
+            if s[i] in ["*", "/"]:
+                s[i+1] = str(int(s[i-1]) * int(s[i+1])) if s[i] == "*" else str(int
+                    (int(s[i-1]) / int(s[i+1])))
+                s[i-1] = ""
+                s[i] = ""
+                i += 2
+            else:
+                i += 1
+                s = [it for it in s if it != ""]
+        add = [int(s[i]) if s[i-1] == "+" else -int(s[i]) for i in range(2, len(s), 2
+            )]
+        return int(s[0]) + sum(add)
+        

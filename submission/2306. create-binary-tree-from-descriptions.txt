@@ -1,0 +1,30 @@
+# Definition for a binary tree node.
+class TreeNode(object):
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+class Solution(object):
+    def createBinaryTree(self, des):
+        res = []
+        head = []
+        dirs = {}
+        son = [it[1] for it in des]
+        start = [it[0] for it in des if it[0] not in son][0]
+        dirs[start] = None
+        for it in des:dirs[it[1]] = None
+        dirsr = dirs.copy()
+        for it in des:
+            if it[2] == 1:
+                dirs[it[0]] = it[1]
+            else:
+                dirsr[it[0]]= it[1]
+        self.dirs = dirs
+        self.dirsr = dirsr
+        return self.cbt(start)
+    def cbt(self, idx):
+        ll = self.dirs[idx]
+        rr = self.dirsr[idx]
+        left = self.cbt(ll) if ll else None
+        right = self.cbt(rr) if rr else None
+        return TreeNode(val=idx, left = left, right = right)

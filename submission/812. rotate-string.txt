@@ -1,0 +1,6 @@
+class Solution(object):
+    def rotateString(self, s, goal):
+        idx = [i for i, it in enumerate(s) if it == goal[0]]
+        for ii in idx:
+            if s[ii:] + s[:ii] == goal:return True
+        return False

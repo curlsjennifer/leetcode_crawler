@@ -1,0 +1,27 @@
+class Solution(object):
+    def maxKilledEnemies(self, grid):
+        m, n = len(grid), len(grid[0])
+        rec = [[0 for i in range(n)] for j in range(m)]
+        for i in range(m):
+            flag, empty, people = -1, 0, 0
+            grid[i] = grid[i] + ["W"]
+            for j in range(n+1):
+                if grid[i][j] == "E":people += 1
+                if grid[i][j] == "0":empty = 1
+                if grid[i][j] == "W":
+                    if empty == 1:
+                        for jj in range(flag+1, j):
+                            if grid[i][jj] == "0":rec[i][jj] = people
+                    flag, empty, people = j, 0, 0
+        grid = grid + [["W" for i in range(n+1)]]
+        for j in range(n):
+            flag, empty, people = -1, 0, 0
+            for i in range(m+1):
+                if grid[i][j] == "E":people += 1
+                if grid[i][j] == "0":empty = 1
+                if grid[i][j] == "W":
+                    if empty == 1:
+                        for ii in range(flag+1, i):
+                            if grid[ii][j] == "0":rec[ii][j] += people
+                    flag, empty, people = i, 0, 0
+        return max([max(it) for it in rec])

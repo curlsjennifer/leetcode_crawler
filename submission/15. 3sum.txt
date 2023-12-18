@@ -1,0 +1,54 @@
+class Solution(object):
+    def threeSum(self, nums):
+        self.dictp = {}
+        self.dictn = {}
+        if len(nums) < 3:return []
+        if len(nums) == 3:return [nums] if sum(nums) == 0 else []
+        nums = sorted(nums)
+        idx0, idx1, idx2 = 0, 1, len(nums)-1
+        rec = []
+        while (idx2 > idx1) & (idx1 > idx0):
+            ridx = [idx0, idx1, idx2]
+            s0 = nums[idx0] + nums[idx1] + nums[idx2]
+            if s0 == 0:
+                rec.append([nums[idx0], nums[idx1], nums[idx2]])
+                idx1 = min(idx2-1, self.next(idx1, 1, nums))
+            elif s0 > 0:
+                idx2 = max(idx1+1, self.next(idx2, -1, nums))
+            else:
+                idx1 = min(idx2-1, self.next(idx1, 1, nums))
+            if (nums[idx2] == nums[ridx[2]]) & (nums[idx1] == nums[ridx[1]]):
+                idx0 = min(len(nums)-3, self.next(idx0, 1, nums))
+                if idx0 > len(nums) -2:break;
+                idx1 = idx0+1
+                total = -nums[idx0] - nums[idx1]
+                while nums[idx2] < total:
+                    if idx2 < len(nums) -1:
+                        idx2 += 1
+                    else:
+                        break;
+            chk1 = pow(ridx[0]-idx0,2) + pow(ridx[1]-idx1,2) + pow(ridx[2]-idx2,2)
+            if chk1 == 0:break
+            chk2 = pow(nums[ridx[0]]-nums[idx0],2) + pow(nums[ridx[1]]-nums[idx1], 2) 
+                + pow(nums[ridx[2]]-nums[idx2],2)
+            if chk2 == 0:break
+            if (ridx[0] != idx0) & (nums[ridx[0]] == nums[idx0]):break
+        return rec
+    def next(self, idx, dif, numlst):
+        try:
+            if dif > 0:
+                return self.dictp[idx]
+            else:
+                return self.dictn[idx]
+        except:
+            if dif > 0:
+                for i in range(idx, len(numlst)):
+                    if numlst[i] != numlst[idx]:
+                        self.dictp[idx] = i
+                        return i
+            else:
+                for i in range(idx, -1, -1):
+                    if numlst[i]!= numlst[idx]:
+                        self.dictn[idx] = i
+                        return i
+            return idx

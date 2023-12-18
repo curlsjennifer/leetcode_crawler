@@ -1,0 +1,10 @@
+class Solution(object):
+    def lastRemaining(self, n):
+        return self.lr(n, 1)
+    def lr(self, n, dirs):
+        if n == 1:return 1
+        if n == 2:return 2 if dirs == 1 else 1
+        idx = self.lr(int(n/2), -dirs)
+        if (dirs < 0) & (mod(n,2) == 0):return 2*idx-1
+        return 2*idx
+        

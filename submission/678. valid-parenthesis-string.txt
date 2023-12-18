@@ -1,0 +1,21 @@
+class Solution(object):
+    def checkValidString(self, sign):
+        if sign[-1] == "(":return False
+        if sign[0] == ")":return False
+        upper, lower, zero = (1 if sign[0] == "(" else 0), 0, (1 if sign[0] == "*" 
+            else 0)
+        for i in range(1, len(sign)):
+            upper = upper + (1 if sign[i] == "(" else 0)
+            lower = lower + (1 if sign[i] == ")" else 0)
+            zero = zero + (1 if sign[i] == "*" else 0)
+            if lower - upper > zero:return False
+        sign = "".join([sign[i] for i in range(len(sign)-1, -1, -1)]).replace("(", 
+            "A").replace(")", "(").replace("A", ")")
+        upper, lower, zero = (1 if sign[0] == "(" else 0), 0, (1 if sign[0] == "*" 
+            else 0)
+        for i in range(1, len(sign)):
+            upper = upper + (1 if sign[i] == "(" else 0)
+            lower = lower + (1 if sign[i] == ")" else 0)
+            zero = zero + (1 if sign[i] == "*" else 0)
+            if lower - upper > zero:return False
+        return True

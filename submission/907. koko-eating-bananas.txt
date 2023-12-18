@@ -1,0 +1,17 @@
+class Solution(object):
+    def minEatingSpeed(self, piles, h):
+        minn, maxn, cen = 1, max(piles), -1
+        if len(piles) == 1 and h >= piles[0]:return 1
+        if h >= sum(piles):return 1
+        if len(piles) == 1:return int(piles[0]/h) if mod(piles[0], h) == 0 else int
+            (piles[0]/h) + 1
+        if h == len(piles):return max(piles)
+        while int((minn+maxn)/2) != cen:
+            cen = int((minn+maxn)/2)
+            hour = sum([int(it/cen) if mod(it,cen)==0 else int(it/cen)+1 for it in 
+                piles])
+            if hour > h:
+                minn = cen
+            else:
+                maxn = cen
+        return cen + 1

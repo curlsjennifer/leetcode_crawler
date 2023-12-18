@@ -1,0 +1,23 @@
+class Solution(object):
+    def minPathSum(self, grid):
+        m = len(grid)
+        n = len(grid[0])
+        if m == 1:return sum(grid[0])
+        if n == 1:return sum([it[0] for it in grid])
+        rec = [[0 for j in range(n)] for i in range(m)]
+        rec[-1][-1] = grid[-1][-1]
+        for i in range(n-2, -m-1, -1):
+            for j in range(m+n):
+                y = m - 1 - j
+                x = i + j
+                if ( 0 <= x <= n-1) & (0 <= y <= m-1):
+                    if x == n-1:rec[y][x] = rec[y+1][x] + grid[y][x]
+                    if y == m-1:rec[y][x] = rec[y][x+1] + grid[y][x]
+                    if (x < n-1) & (y < m-1):rec[y][x] = min(rec[y+1][x], rec[y][x+1]
+                        ) + grid[y][x]
+        return rec[0][0]
+        """
+        :type grid: List[List[int]]
+        :rtype: int
+        """
+        

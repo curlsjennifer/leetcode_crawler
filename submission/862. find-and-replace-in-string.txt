@@ -1,0 +1,15 @@
+class Solution(object):
+    def findReplaceString(self, s, idi, sor, tar):
+        sor = sorted(enumerate(sor), key=lambda x:idi[x[0]])
+        sor = [it[1] for it in sor]
+        tar = sorted(enumerate(tar), key=lambda x:idi[x[0]])
+        tar = [it[1] for it in tar]
+        idi = sorted(idi)
+        s, idi, sor, tar = s + "%", idi + [len(s)], sor + ['%'], tar + [""]
+        res, prev = "", -1
+        for i, itd in enumerate(idi):
+            if s[itd:itd+len(sor[i])] == sor[i]:
+                res = res + s[prev+1:itd] + tar[i]
+                prev = itd + len(sor[i]) - 1
+                print(s, res, sor[i])
+        return res

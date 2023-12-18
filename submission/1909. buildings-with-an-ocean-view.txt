@@ -1,0 +1,11 @@
+class Solution(object):
+    def findBuildings(self, heights):
+        if len(heights) == 1:return [0]
+        res = [len(heights)-1]
+        maxh = heights[-1]
+        for i in range(len(heights)-2, -1, -1):
+            if heights[i] > maxh:
+                res.append(i)
+                maxh = heights[i]
+        res.reverse()
+        return res

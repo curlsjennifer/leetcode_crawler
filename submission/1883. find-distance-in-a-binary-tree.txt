@@ -1,0 +1,20 @@
+# Definition for a binary tree node.
+# class TreeNode(object):
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution(object):
+    def findDistance(self, root, p, q):
+      return -self.fd(root, p, q)
+    def fd(self, root, p, q):
+      if p == q:return 0
+      if root == None:return 0
+      left = self.fd(root.left, p, q)
+      right = self.fd(root.right, p, q)
+      if left < 0 or right < 0:return min(left, right)
+      if root.val == p or root.val == q:return -(left + right) if max(left, right) > 
+          0 else 1
+      if max(left, right) == 0:return 0
+      if min(left, right) == 0:return max(left, right) + 1
+      return -(left + right)

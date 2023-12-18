@@ -1,0 +1,10 @@
+class Solution(object):
+    def majorityElement(self, nums):
+        dirs, key = {}, set(nums)
+        for it in key:dirs[it] = 0
+        for it in nums:dirs[it] += 1
+        ll = int((len(nums))/3)
+        res = []
+        for it in key:
+            if dirs[it] > ll:res.append(it)
+        return res

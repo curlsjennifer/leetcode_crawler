@@ -1,0 +1,13 @@
+class Solution(object):
+    def reorderedPowerOf2(self, n):
+        if n == 1:return True
+        maxn = pow(10, 9)
+        pow2 = [1]
+        while pow2[-1]*2 < maxn:pow2.append(pow2[-1]*2)
+        lpow2 = [self.cvt(item) for item in pow2]
+        return True if self.cvt(n) in lpow2 else False
+    def cvt(self, n):
+        txt = str(n)
+        lst = [0 for i in range(10)]
+        for it in txt:lst[int(it)] += 1
+        return lst
