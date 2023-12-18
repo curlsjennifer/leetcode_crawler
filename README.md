@@ -25,12 +25,12 @@ Apply selenium to download all my leetcode submissions
 | ...           | ...                                | ...           | ...                                |
 
 ### submission.csv ### 
-| question_id | title                                          | title_slug                                     | lang_name | runtime | question__title                                | Difficulity | memory | submission_id | memory | submission_id |
-|-------------|------------------------------------------------|------------------------------------------------|-----------|---------|------------------------------------------------|-------------|--------|---------------|--------|---------------|
-| 1           | Two Sum                                        | two-sum                                        | Python    | 0%      | Two Sum                                        | 1           | 0%     | 5.39E+08      | 0%     | 5.39E+08      |
-| 2           | Add Two Numbers                                | add-two-numbers                                | Python    | 8.80%   | Add Two Numbers                                | 2           | 99.36% | 1.07E+09      | 99.36% | 1.07E+09      |
-| 3           | Longest Substring Without Repeating Characters | longest-substring-without-repeating-characters | Python    | 11.91%  | Longest Substring Without Repeating Characters | 2           | 10.73% | 1.08E+09      | 10.73% | 1.08E+09      |
-| 4           | Median of Two Sorted Arrays                    | median-of-two-sorted-arrays                    | Python    | 0%      | Median of Two Sorted Arrays                    | 3           | 0%     | 7.1E+08       | 0%     | 7.1E+08       |
-| 5           | Longest Palindromic Substring                  | longest-palindromic-substring                  | Python    | 99.87%  | Longest Palindromic Substring                  | 2           | 93.27% | 1.09E+09      | 93.27% | 1.09E+09      |
-| 6           | Zigzag Conversion                              | zigzag-conversion                              | Python    | 15.18%  | Zigzag Conversion                              | 2           | 23.52% | 1.08E+09      | 23.52% | 1.08E+09      |
-| …           | …                                              | …                                              | …         | …       | …                                              | …           | …      | …             | …      | …             |
+| question_id | title                                          | title_slug                                     | lang_name | runtime | question__title                                | Difficulity | memory |
+|-------------|------------------------------------------------|------------------------------------------------|-----------|---------|------------------------------------------------|-------------|--------|
+| 1           | Two Sum                                        | two-sum                                        | Python    | 0%      | Two Sum                                        | 1           | 0%     |
+| 2           | Add Two Numbers                                | add-two-numbers                                | Python    | 8.80%   | Add Two Numbers                                | 2           | 99.36% |
+| 3           | Longest Substring Without Repeating Characters | longest-substring-without-repeating-characters | Python    | 11.91%  | Longest Substring Without Repeating Characters | 2           | 10.73% |
+| 4           | Median of Two Sorted Arrays                    | median-of-two-sorted-arrays                    | Python    | 0%      | Median of Two Sorted Arrays                    | 3           | 0%     |
+| 5           | Longest Palindromic Substring                  | longest-palindromic-substring                  | Python    | 99.87%  | Longest Palindromic Substring                  | 2           | 93.27% |
+| 6           | Zigzag Conversion                              | zigzag-conversion                              | Python    | 15.18%  | Zigzag Conversion                              | 2           | 23.52% |
+| …           | …                                              | …                                              | …         | …       | …                                              | …           | …      |
